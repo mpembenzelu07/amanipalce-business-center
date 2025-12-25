@@ -4,547 +4,385 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amani Place | Premium Business Center in Dar es Salaam</title>
-    <!-- Premium Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Premium Icons -->
+    <title>Amani Place | Premium Office Space Dar es Salaam</title>
+    <meta name="description" content="Amani Place - Premium business center in Dar es Salaam offering luxury office spaces, meeting rooms, and executive amenities.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor-gold"></div>
-
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader">
-            <div class="loader-inner"></div>
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="premium-nav" id="mainNav">
-        <div class="nav-container">
-            <div class="logo-container">
-                <a href="index.html" class="logo-link">
-                    <div class="logo-icon"></div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav-container">
+                <div class="logo">
+                    <div class="logo-icon">AP</div>
                     <div class="logo-text">
-                        <div class="logo-main">AMANI PLACE</div>
-                        <div class="logo-sub">PREMIUM OFFICES</div>
+                        <h1>Amani <span>Place</span></h1>
+                        <p class="logo-sub">PREMIUM BUSINESS CENTER</p>
                     </div>
-                </a>
-            </div>
-            
-            <div class="nav-menu">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link active lang-en">Home</a>
-                        <a href="index.html" class="nav-link active lang-sw">Nyumbani</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link lang-en">About</a>
-                        <a href="about.html" class="nav-link lang-sw">Kuhusu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="spaces.html" class="nav-link lang-en">Spaces</a>
-                        <a href="spaces.html" class="nav-link lang-sw">Nafasi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="amenities.html" class="nav-link lang-en">Amenities</a>
-                        <a href="amenities.html" class="nav-link lang-sw">Vifaa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="gallery.html" class="nav-link lang-en">Gallery</a>
-                        <a href="gallery.html" class="nav-link lang-sw">Picha</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.html" class="nav-link lang-en">Contact</a>
-                        <a href="contact.html" class="nav-link lang-sw">Mawasiliano</a>
-                    </li>
-                </ul>
-                
-                <div class="nav-actions">
+                </div>
+
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="active lang-en">Home</a><a href="index.html" class="active lang-sw">Nyumbani</a></li>
+                        <li><a href="about.html" class="lang-en">About</a><a href="about.html" class="lang-sw">Kuhusu</a></li>
+                        <li><a href="services.html" class="lang-en">Services</a><a href="services.html" class="lang-sw">Huduma</a></li>
+                        <li><a href="spaces.html" class="lang-en">Spaces</a><a href="spaces.html" class="lang-sw">Nafasi</a></li>
+                        <li><a href="gallery.html" class="lang-en">Gallery</a><a href="gallery.html" class="lang-sw">Picha</a></li>
+                        <li><a href="contact.html" class="lang-en">Contact</a><a href="contact.html" class="lang-sw">Wasiliana</a></li>
+                    </ul>
+
                     <div class="language-switcher">
                         <button class="language-btn" id="languageBtn">
-                            <span id="currentLanguage">EN</span>
+                            <span id="currentLang">EN</span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="language-dropdown" id="languageDropdown">
                             <div class="language-option active" data-lang="en">
-                                <div class="flag-icon" style="background: linear-gradient(180deg, #012169 0%, #C8102E 50%, #FFFFFF 100%);"></div>
-                                <span class="lang-en">English</span>
-                                <span class="lang-sw">Kiingereza</span>
+                                <div class="flag-icon" style="background: #012169; border-right: 120px solid #C8102E; border-bottom: 60px solid transparent;"></div>
+                                <span>English</span>
                             </div>
                             <div class="language-option" data-lang="sw">
-                                <div class="flag-icon" style="background: linear-gradient(180deg, #1EB53A 0%, #00A3DD 33%, #000000 33%, #000000 66%, #00A3DD 66%);"></div>
-                                <span class="lang-en">Swahili</span>
-                                <span class="lang-sw">Kiswahili</span>
+                                <div class="flag-icon" style="background: 
+                                    linear-gradient(0deg, 
+                                        #1EB53A 0%, #1EB53A 33%, 
+                                        #000000 33%, #000000 66%, 
+                                        #00A3DD 66%, #00A3DD 100%
+                                    );"></div>
+                                <span>Kiswahili</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <a href="contact.html#tour" class="btn-nav">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-crown"></i>
+                    <span class="lang-en">DAR ES SALAAM'S PREMIUM BUSINESS ADDRESS</span>
+                    <span class="lang-sw">ANWANI BORA YA BIASHARA YA DAR ES SALAAM</span>
+                </div>
+                
+                <h1 class="lang-en">Elevate Your Business Excellence</h1>
+                <h1 class="lang-sw">Inua Ubora wa Biashara Yako</h1>
+                
+                <p class="lang-en">
+                    Experience unparalleled luxury and sophistication in Tanzania's most exclusive business center. 
+                    Premium office spaces, state-of-the-art amenities, and executive services designed for success.
+                </p>
+                <p class="lang-sw">
+                    Pata anasa na ustadi usio na kifani katika kituo cha biashara cha kipekee zaidi cha Tanzania.
+                    Nafasi bora za ofisi, vifaa vya kisasa, na huduma za utawala zilizoundwa kwa mafanikio.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="spaces.html" class="btn btn-primary">
+                        <i class="fas fa-building"></i>
+                        <span class="lang-en">View Spaces</span>
+                        <span class="lang-sw">Angalia Nafasi</span>
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
                         <i class="fas fa-calendar-alt"></i>
-                        <span class="lang-en">Book Tour</span>
+                        <span class="lang-en">Book a Tour</span>
                         <span class="lang-sw">Panga Ziara</span>
                     </a>
                 </div>
-            </div>
-            
-            <button class="mobile-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-            <div class="hero-video">
-                <!-- Video background would be here -->
-            </div>
-        </div>
-        
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-crown"></i>
-                <span class="lang-en">DAR ES SALAAM'S FINEST</span>
-                <span class="lang-sw">BORA KATIKA DAR ES SALAAM</span>
-            </div>
-            
-            <h1 class="hero-title">
-                <span class="lang-en">Redefining</span>
-                <span class="lang-sw">Kufafanua Upya</span>
-                <br>
-                <span class="lang-en">Business Excellence</span>
-                <span class="lang-sw">Ubora wa Biashara</span>
-            </h1>
-            
-            <p class="hero-subtitle lang-en">
-                Tanzania's premier destination for executive offices, boardrooms, and premium business amenities.
-                Where success finds its perfect environment.
-            </p>
-            <p class="hero-subtitle lang-sw">
-                Lengo kuu la Tanzania kwa ofisi za utawala, vyumba vya bodi, na vifaa bora vya biashara.
-                Ambapo mafanikio hupata mazingira yake kamili.
-            </p>
-            
-            <div class="hero-cta">
-                <a href="spaces.html" class="btn-primary">
-                    <i class="fas fa-building"></i>
-                    <span class="lang-en">Explore Spaces</span>
-                    <span class="lang-sw">Gundua Nafasi</span>
-                </a>
-                <a href="contact.html#tour" class="btn-secondary">
-                    <i class="fas fa-play-circle"></i>
-                    <span class="lang-en">Virtual Tour</span>
-                    <span class="lang-sw">Ziara Mtandaoni</span>
-                </a>
-            </div>
-            
-            <div class="hero-features">
-                <div class="feature-item">
-                    <i class="fas fa-star"></i>
-                    <div>
-                        <span class="lang-en">4.8/5 Rating</span>
-                        <span class="lang-sw">Ukadirifu 4.8/5</span>
-                        <small class="lang-en">From 850+ reviews</small>
-                        <small class="lang-sw">Kutoka kwa hakiki 850+</small>
+                
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>4.8/5 Rating</h4>
+                            <p class="lang-en">850+ Client Reviews</p>
+                            <p class="lang-sw">Hakiki 850+ za Wateja</p>
+                        </div>
                     </div>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-building"></i>
-                    <div>
-                        <span class="lang-en">12 Floors</span>
-                        <span class="lang-sw">Sakafu 12</span>
-                        <small class="lang-en">Premium Office Space</small>
-                        <small class="lang-sw">Nafasi Bora ya Ofisi</small>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>12 Floors</h4>
+                            <p class="lang-en">Premium Office Space</p>
+                            <p class="lang-sw">Nafasi Bora ya Ofisi</p>
+                        </div>
                     </div>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <span class="lang-en">200+ Companies</span>
-                        <span class="lang-sw">Kampuni 200+</span>
-                        <small class="lang-en">Trust Our Spaces</small>
-                        <small class="lang-sw">Tumaini Nafasi Zetu</small>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>200+ Companies</h4>
+                            <p class="lang-en">Trust Our Facilities</p>
+                            <p class="lang-sw">Tumaini Vifaa Vyetu</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="hero-scroll">
-            <span class="lang-en">Scroll to Discover</span>
-            <span class="lang-sw">Songa Kushughulikia Ugunduzi</span>
-            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- Featured Spaces -->
-    <section class="featured-spaces">
+    <!-- Features Section -->
+    <section class="section">
         <div class="container">
             <div class="section-header">
-                <span class="section-label lang-en">PREMIUM SELECTION</span>
-                <span class="section-label lang-sw">UCHAGUZI BORA</span>
-                <h2 class="section-title">
-                    <span class="lang-en">Featured Workspaces</span>
-                    <span class="lang-sw">Maeneo ya Kazi Yanayovutia</span>
-                </h2>
+                <span class="section-label lang-en">WHY CHOOSE US</span>
+                <span class="section-label lang-sw">KWA NINI KUTUCHAGUA</span>
+                <h2 class="section-title lang-en">Premium Business Solutions</h2>
+                <h2 class="section-title lang-sw">Ufumbuzi Bora wa Biashara</h2>
                 <p class="section-description lang-en">
-                    Experience our most sought-after office environments, designed for productivity and prestige
+                    Designed for executives, entrepreneurs, and businesses seeking excellence in Dar es Salaam's prime location.
                 </p>
                 <p class="section-description lang-sw">
-                    Pata uzoefu wa mazingira yetu ya ofisi yanayotafutwa sana, yaliyoundwa kwa uzalishaji na hadhi
+                    Ilivyoundwa kwa watendaji, wajasiriamali, na biashara zinazotafuta ubora katika eneo kuu la Dar es Salaam.
                 </p>
             </div>
             
-            <div class="spaces-grid">
-                <div class="space-card">
-                    <div class="space-image">
-                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Executive Office">
-                        <div class="space-overlay">
-                            <a href="spaces.html#executive" class="btn-view">
-                                <span class="lang-en">View Details</span>
-                                <span class="lang-sw">Angalia Maelezo</span>
-                            </a>
-                        </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <div class="space-content">
-                        <h3 class="space-title lang-en">Executive Corner Office</h3>
-                        <h3 class="space-title lang-sw">Ofisi ya Kona ya Utawala</h3>
-                        <p class="space-description lang-en">
-                            Panoramic views, custom furnishings, private balcony, and dedicated support
-                        </p>
-                        <p class="space-description lang-sw">
-                            Maonyesho ya panorama, samani maalum, balcony binafsi, na usaidizi uliojitosheleza
-                        </p>
-                        <div class="space-meta">
-                            <span><i class="fas fa-expand-arrows-alt"></i> 850 sq.ft.</span>
-                            <span><i class="fas fa-user-friends"></i> 1-4 People</span>
-                            <span><i class="fas fa-tag"></i> $3,500/month</span>
-                        </div>
-                    </div>
+                    <h3 class="lang-en">Prime Location</h3>
+                    <h3 class="lang-sw">Eneo Bora</h3>
+                    <p class="lang-en">Located in the heart of Dar es Salaam's business district on Ohio Street.</p>
+                    <p class="lang-sw">Ipo katikati mwa eneo la biashara la Dar es Salaam katika Ohio Street.</p>
                 </div>
                 
-                <div class="space-card">
-                    <div class="space-image">
-                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Boardroom">
-                        <div class="space-overlay">
-                            <a href="spaces.html#boardroom" class="btn-view">
-                                <span class="lang-en">View Details</span>
-                                <span class="lang-sw">Angalia Maelezo</span>
-                            </a>
-                        </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-building"></i>
                     </div>
-                    <div class="space-content">
-                        <h3 class="space-title lang-en">Sovereign Boardroom</h3>
-                        <h3 class="space-title lang-sw">Chumba cha Bodi cha Enzi</h3>
-                        <p class="space-description lang-en">
-                            State-of-the-art technology, executive seating, and premium presentation systems
-                        </p>
-                        <p class="space-description lang-sw">
-                            Teknolojia ya kisasa, viti vya utawala, na mifumo bora ya uwasilishaji
-                        </p>
-                        <div class="space-meta">
-                            <span><i class="fas fa-expand-arrows-alt"></i> 1,200 sq.ft.</span>
-                            <span><i class="fas fa-user-friends"></i> 20 People</span>
-                            <span><i class="fas fa-tag"></i> $250/hour</span>
-                        </div>
-                    </div>
+                    <h3 class="lang-en">A-Grade Building</h3>
+                    <h3 class="lang-sw">Jengo la Daraja A</h3>
+                    <p class="lang-en">Modern 12-floor building with premium finishes and smart technology.</p>
+                    <p class="lang-sw">Jengo la kisasa la sakafu 12 lenye kumaliza bora na teknolojia smart.</p>
                 </div>
                 
-                <div class="space-card">
-                    <div class="space-image">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Coworking">
-                        <div class="space-overlay">
-                            <a href="spaces.html#coworking" class="btn-view">
-                                <span class="lang-en">View Details</span>
-                                <span class="lang-sw">Angalia Maelezo</span>
-                            </a>
-                        </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <div class="space-content">
-                        <h3 class="space-title lang-en">Premium Coworking</h3>
-                        <h3 class="space-title lang-sw">Kushirikiana Kazi Bora</h3>
-                        <p class="space-description lang-en">
-                            Flexible workspace with premium amenities, networking events, and business support
-                        </p>
-                        <p class="space-description lang-sw">
-                            Nafasi ya kazi rahisi na vifaa bora, hafla za mitandao, na usaidizi wa biashara
-                        </p>
-                        <div class="space-meta">
-                            <span><i class="fas fa-expand-arrows-alt"></i> Flexible</span>
-                            <span><i class="fas fa-user-friends"></i> Individual</span>
-                            <span><i class="fas fa-tag"></i> $450/month</span>
-                        </div>
-                    </div>
+                    <h3 class="lang-en">Flexible Terms</h3>
+                    <h3 class="lang-sw">Masharti Rahisi</h3>
+                    <p class="lang-en">No long-term commitments. Lease terms from 1 month to 5 years.</p>
+                    <p class="lang-sw">Hakuna ahadi za muda mrefu. Masharti ya kukodisha kutoka mwezi 1 hadi miaka 5.</p>
                 </div>
-            </div>
-            
-            <div class="section-footer">
-                <a href="spaces.html" class="btn-outline">
-                    <span class="lang-en">View All Spaces</span>
-                    <span class="lang-sw">Angalia Nafasi Zote</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Premium Amenities -->
-    <section class="premium-amenities">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label lang-en">BEYOND OFFICE SPACE</span>
-                <span class="section-label lang-sw">ZAIDI YA NAFASI YA OFISI</span>
-                <h2 class="section-title">
-                    <span class="lang-en">Platinum Amenities</span>
-                    <span class="lang-sw">Vifaa vya Platinamu</span>
-                </h2>
-            </div>
-            
-            <div class="amenities-grid">
-                <div class="amenity-card">
-                    <div class="amenity-icon">
+                
+                <div class="feature-card">
+                    <div class="feature-card-icon">
                         <i class="fas fa-concierge-bell"></i>
                     </div>
-                    <h3 class="amenity-title lang-en">24/7 Concierge</h3>
-                    <h3 class="amenity-title lang-sw">Msimamizi 24/7</h3>
-                    <p class="amenity-description lang-en">
-                        Personal assistants, travel planning, and exclusive lifestyle management
-                    </p>
-                    <p class="amenity-description lang-sw">
-                        Wasaidizi binafsi, upangaji wa safari, na usimamizi wa kipekee wa mtindo wa maisha
-                    </p>
+                    <h3 class="lang-en">Full Support</h3>
+                    <h3 class="lang-sw">Usaidizi Kamili</h3>
+                    <p class="lang-en">24/7 concierge, reception, admin support, and business services.</p>
+                    <p class="lang-sw">Msimamizi 24/7, mapokezi, usaidizi wa utawala, na huduma za biashara.</p>
                 </div>
-                
-                <div class="amenity-card">
-                    <div class="amenity-icon">
-                        <i class="fas fa-wifi"></i>
-                    </div>
-                    <h3 class="amenity-title lang-en">Enterprise WiFi</h3>
-                    <h3 class="amenity-title lang-sw">WiFi ya Biashara</h3>
-                    <p class="amenity-description lang-en">
-                        Gigabit fiber optic with dedicated bandwidth and 99.9% uptime guarantee
-                    </p>
-                    <p class="amenity-description lang-sw">
-                        Fiber optic ya gigabit na bandwidth maalum na dhamana ya muda wa kufanya kazi 99.9%
-                    </p>
-                </div>
-                
-                <div class="amenity-card">
-                    <div class="amenity-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3 class="amenity-title lang-en">Executive Lounge</h3>
-                    <h3 class="amenity-title lang-sw">Sebule ya Utawala</h3>
-                    <p class="amenity-description lang-en">
-                        Curated refreshments, private chef services, and sommelier wine selection
-                    </p>
-                    <p class="amenity-description lang-sw">
-                        Vinywaji vilivyochaguliwa, huduma za mpishi binafsi, na uchaguzi wa mvinyo wa sommelier
-                    </p>
-                </div>
-                
-                <div class="amenity-card">
-                    <div class="amenity-icon">
-                        <i class="fas fa-spa"></i>
-                    </div>
-                    <h3 class="amenity-title lang-en">Wellness Center</h3>
-                    <h3 class="amenity-title lang-sw">Kituo cha Ustawi</h3>
-                    <p class="amenity-description lang-en">
-                        Yoga studio, massage therapy, fitness center, and wellness consultations
-                    </p>
-                    <p class="amenity-description lang-sw">
-                        Studio ya yoga, tiba ya mikunjo, kituo cha mazoezi, na ushauri wa ustawi
-                    </p>
-                </div>
-            </div>
-            
-            <div class="section-footer">
-                <a href="amenities.html" class="btn-link">
-                    <span class="lang-en">Explore All Amenities</span>
-                    <span class="lang-sw">Gundua Vifaa Vyote</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials-section">
+    <!-- Services Preview -->
+    <section class="section" style="background: rgba(255, 255, 255, 0.02);">
         <div class="container">
             <div class="section-header">
-                <span class="section-label lang-en">CLIENT SUCCESS</span>
-                <span class="section-label lang-sw">MAFANIKIO YA MWANAHA</span>
-                <h2 class="section-title">
-                    <span class="lang-en">Trusted by Leaders</span>
-                    <span class="lang-sw">Imeaminika na Viongozi</span>
-                </h2>
+                <span class="section-label lang-en">OUR SERVICES</span>
+                <span class="section-label lang-sw">HUDUMA ZETU</span>
+                <h2 class="section-title lang-en">Comprehensive Business Solutions</h2>
+                <h2 class="section-title lang-sw">Ufumbuzi Kamili wa Biashara</h2>
             </div>
             
-            <div class="testimonials-slider">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text lang-en">
-                            "Amani Place transformed our business operations. The premium facilities and exceptional service have elevated our brand presence in East Africa."
-                        </p>
-                        <p class="testimonial-text lang-sw">
-                            "Amani Place ilibadilisha shughuli zetu za biashara. Vifaa bora na huduma bora vimeinua uwepo wa chapa yetu katika Afrika Mashariki."
-                        </p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="CEO">
-                            </div>
-                            <div class="author-info">
-                                <h4>James Mwenda</h4>
-                                <p class="lang-en">CEO, Pan African Ventures</p>
-                                <p class="lang-sw">Mkurugenzi Mtendaji, Pan African Ventures</p>
-                            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Private Offices">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Private Offices</h3>
+                        <h3 class="lang-sw">Ofisi Binafsi</h3>
+                        <p class="lang-en">Fully furnished private offices with flexible lease terms, perfect for teams of all sizes.</p>
+                        <p class="lang-sw">Ofisi binafsi zilizo na samani kamili na masharti rahisi ya kukodisha, zinazofaa kwa timu za ukubwa wowote.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-expand-arrows-alt"></i> <span class="lang-en">From 250 sq.ft.</span><span class="lang-sw">Kutoka 250 sq.ft.</span></span>
+                            <span><i class="fas fa-users"></i> 1-20 <span class="lang-en">People</span><span class="lang-sw">Watu</span></span>
                         </div>
                     </div>
                 </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Meeting Rooms">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="lang-en">Meeting Rooms</h3>
+                        <h3 class="lang-sw">Vyumba vya Mikutano</h3>
+                        <p class="lang-en">Professional meeting spaces equipped with modern technology for presentations and collaborations.</p>
+                        <p class="lang-sw">Maeneo ya kitaalamu ya mikutano yaliyowekewa teknolojia ya kisasa kwa madaarasa na ushirikiano.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-expand-arrows-alt"></i> <span class="lang-en">Various Sizes</span><span class="lang-sw">Ukubwa Mbalimbali</span></span>
+                            <span><i class="fas fa-users"></i> 4-50 <span class="lang-en">People</span><span class="lang-sw">Watu</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="services.html" class="btn btn-secondary">
+                    <span class="lang-en">View All Services</span>
+                    <span class="lang-sw">Angalia Huduma Zote</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="section">
         <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">
-                    <span class="lang-en">Ready to Elevate Your Business?</span>
-                    <span class="lang-sw">Tayari Kuinua Biashara Yako?</span>
-                </h2>
-                <p class="cta-description lang-en">
-                    Schedule a private tour and experience the Amani Place difference today
+            <div class="section-header">
+                <h2 class="section-title lang-en">Ready to Elevate Your Business?</h2>
+                <h2 class="section-title lang-sw">Tayari Kuinua Biashara Yako?</h2>
+                <p class="section-description lang-en">
+                    Schedule a private tour and experience the Amani Place difference today.
                 </p>
-                <p class="cta-description lang-sw">
-                    Panga ziara binafsi na upate uzoefu wa tofauti ya Amani Place leo
+                <p class="section-description lang-sw">
+                    Panga ziara binafsi na ujione tofauti ya Amani Place leo.
                 </p>
-                <div class="cta-buttons">
-                    <a href="contact.html#tour" class="btn-primary">
-                        <i class="fas fa-calendar-alt"></i>
-                        <span class="lang-en">Book Private Tour</span>
-                        <span class="lang-sw">Panga Ziara Binafsi</span>
-                    </a>
-                    <a href="contact.html" class="btn-outline">
-                        <i class="fas fa-phone-alt"></i>
-                        <span class="lang-en">Contact Us</span>
-                        <span class="lang-sw">Wasiliana Nasi</span>
-                    </a>
-                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="contact.html" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1rem;">
+                    <i class="fas fa-calendar-check"></i>
+                    <span class="lang-en">Schedule a Tour</span>
+                    <span class="lang-sw">Panga Ziara</span>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="premium-footer">
-        <div class="footer-main">
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-column">
-                        <div class="footer-logo">
-                            <div class="logo-icon"></div>
-                            <div class="logo-text">
-                                <div class="logo-main">AMANI PLACE</div>
-                                <div class="logo-sub">PREMIUM OFFICES</div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo-icon">AP</div>
+                        <div class="logo-text">
+                            <h1>Amani <span>Place</span></h1>
+                            <p class="logo-sub">PREMIUM BUSINESS CENTER</p>
+                        </div>
+                    </div>
+                    <p class="lang-en">
+                        Tanzania's premier business center offering premium office spaces, 
+                        executive amenities, and unparalleled service in Dar es Salaam.
+                    </p>
+                    <p class="lang-sw">
+                        Kituo kikuu cha biashara cha Tanzania kinachotoa nafasi bora za ofisi, 
+                        vifaa vya utawala, na huduma isiyo na kifani katika Dar es Salaam.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="lang-en">Quick Links</h3>
+                    <h3 class="lang-sw">Viungo vya Haraka</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="lang-en">Home</a><a href="index.html" class="lang-sw">Nyumbani</a></li>
+                        <li><a href="about.html" class="lang-en">About Us</a><a href="about.html" class="lang-sw">Kuhusu Sisi</a></li>
+                        <li><a href="services.html" class="lang-en">Services</a><a href="services.html" class="lang-sw">Huduma</a></li>
+                        <li><a href="spaces.html" class="lang-en">Spaces</a><a href="spaces.html" class="lang-sw">Nafasi</a></li>
+                        <li><a href="gallery.html" class="lang-en">Gallery</a><a href="gallery.html" class="lang-sw">Picha</a></li>
+                        <li><a href="contact.html" class="lang-en">Contact</a><a href="contact.html" class="lang-sw">Wasiliana</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="lang-en">Office Spaces</h3>
+                    <h3 class="lang-sw">Nafasi za Ofisi</h3>
+                    <ul class="footer-links">
+                        <li><a href="spaces.html#private" class="lang-en">Private Offices</a><a href="spaces.html#private" class="lang-sw">Ofisi Binafsi</a></li>
+                        <li><a href="spaces.html#meeting" class="lang-en">Meeting Rooms</a><a href="spaces.html#meeting" class="lang-sw">Vyumba vya Mikutano</a></li>
+                        <li><a href="spaces.html#coworking" class="lang-en">Coworking Spaces</a><a href="spaces.html#coworking" class="lang-sw">Nafasi za Kushirikiana Kazi</a></li>
+                        <li><a href="spaces.html#virtual" class="lang-en">Virtual Offices</a><a href="spaces.html#virtual" class="lang-sw">Ofisi Mtandaoni</a></li>
+                        <li><a href="spaces.html#suites" class="lang-en">Executive Suites</a><a href="spaces.html#suites" class="lang-sw">Suti za Utawala</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="lang-en">Contact Info</h3>
+                    <h3 class="lang-sw">Taarifa za Mawasiliano</h3>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>Ohio Street, Office Park</p>
+                                <p>Dar es Salaam, Tanzania</p>
                             </div>
                         </div>
-                        <p class="footer-description lang-en">
-                            Tanzania's premier business center offering premium office spaces, executive amenities, and unparalleled service in Dar es Salaam.
-                        </p>
-                        <p class="footer-description lang-sw">
-                            Kituo kikuu cha biashara cha Tanzania kinachotoa nafasi bora za ofisi, vifaa vya utawala, na huduma isiyo na kifani katika Dar es Salaam.
-                        </p>
-                        <div class="footer-social">
-                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <p>+255 715 023 799</p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h3 class="footer-title lang-en">Quick Links</h3>
-                        <h3 class="footer-title lang-sw">Viungo vya Haraka</h3>
-                        <ul class="footer-links">
-                            <li><a href="index.html" class="footer-link lang-en">Home</a><a href="index.html" class="footer-link lang-sw">Nyumbani</a></li>
-                            <li><a href="about.html" class="footer-link lang-en">About Us</a><a href="about.html" class="footer-link lang-sw">Kuhusu Sisi</a></li>
-                            <li><a href="spaces.html" class="footer-link lang-en">Office Spaces</a><a href="spaces.html" class="footer-link lang-sw">Nafasi za Ofisi</a></li>
-                            <li><a href="amenities.html" class="footer-link lang-en">Amenities</a><a href="amenities.html" class="footer-link lang-sw">Vifaa</a></li>
-                            <li><a href="gallery.html" class="footer-link lang-en">Gallery</a><a href="gallery.html" class="footer-link lang-sw">Picha</a></li>
-                            <li><a href="contact.html" class="footer-link lang-en">Contact</a><a href="contact.html" class="footer-link lang-sw">Mawasiliano</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h3 class="footer-title lang-en">Office Spaces</h3>
-                        <h3 class="footer-title lang-sw">Nafasi za Ofisi</h3>
-                        <ul class="footer-links">
-                            <li><a href="spaces.html#private" class="footer-link lang-en">Private Offices</a><a href="spaces.html#private" class="footer-link lang-sw">Ofisi Binafsi</a></li>
-                            <li><a href="spaces.html#meeting" class="footer-link lang-en">Meeting Rooms</a><a href="spaces.html#meeting" class="footer-link lang-sw">Vyumba vya Mikutano</a></li>
-                            <li><a href="spaces.html#coworking" class="footer-link lang-en">Coworking Spaces</a><a href="spaces.html#coworking" class="footer-link lang-sw">Nafasi za Kushirikiana Kazi</a></li>
-                            <li><a href="spaces.html#virtual" class="footer-link lang-en">Virtual Offices</a><a href="spaces.html#virtual" class="footer-link lang-sw">Ofisi Mtandaoni</a></li>
-                            <li><a href="spaces.html#suites" class="footer-link lang-en">Executive Suites</a><a href="spaces.html#suites" class="footer-link lang-sw">Suti za Utawala</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h3 class="footer-title lang-en">Contact Info</h3>
-                        <h3 class="footer-title lang-sw">Taarifa za Mawasiliano</h3>
-                        <ul class="footer-contact">
-                            <li>
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Ohio Street, Office Park<br>Dar es Salaam, Tanzania</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-phone-alt"></i>
-                                <span>+255 715 023 799</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-envelope"></i>
-                                <span>info@amanipalce.tz</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-clock"></i>
-                                <span class="lang-en">Mon-Fri: 8AM-8PM</span>
-                                <span class="lang-sw">Jumatatu-Ijumaa: 8AM-8PM</span>
-                            </li>
-                        </ul>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <p>info@amanipalce.tz</p>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <p class="lang-en">Mon-Fri: 8:00 AM - 8:00 PM</p>
+                                <p class="lang-sw">Jumatatu-Ijumaa: 8:00 AM - 8:00 PM</p>
+                                <p class="lang-en">Sat: 9:00 AM - 2:00 PM</p>
+                                <p class="lang-sw">Jumamosi: 9:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-bottom-content">
-                    <p class="copyright lang-en">
-                        © 2024 Amani Place Premium. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-                    </p>
-                    <p class="copyright lang-sw">
-                        © 2024 Amani Place Premium. Haki zote zimehifadhiwa. | <a href="#">Sera ya Faragha</a> | <a href="#">Masharti ya Huduma</a>
-                    </p>
-                </div>
+            
+            <div class="footer-bottom">
+                <p class="lang-en">
+                    © 2024 Amani Place Premium. All rights reserved. | 
+                    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                </p>
+                <p class="lang-sw">
+                    © 2024 Amani Place Premium. Haki zote zimehifadhiwa. | 
+                    <a href="#">Sera ya Faragha</a> | <a href="#">Masharti ya Huduma</a>
+                </p>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
 </body>
 </html>
