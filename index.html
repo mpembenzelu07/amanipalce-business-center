@@ -4,972 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amani Place | The Pinnacle of Office Excellence in Dar es Salaam</title>
+    <title>Amani Place | Premium Business Center in Dar es Salaam</title>
     <!-- Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Premium Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Custom CSS -->
-    <style>
-        :root {
-            --gold-primary: #D4AF37;
-            --gold-secondary: #FFD700;
-            --gold-accent: #F5E6A8;
-            --gold-dark: #B8860B;
-            --charcoal: #1A1A1A;
-            --off-white: #F8F5F0;
-            --ivory: #FFFFF0;
-            --bronze: #CD7F32;
-            --platinum: #E5E4E2;
-            --transition-slow: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            --transition-medium: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            --transition-fast: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.15);
-            --shadow-heavy: 0 25px 50px rgba(0, 0, 0, 0.25);
-            --border-gold: 2px solid rgba(212, 175, 55, 0.3);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 100px;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--charcoal);
-            color: var(--off-white);
-            line-height: 1.8;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(205, 127, 50, 0.02) 0%, transparent 50%),
-                linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
-            z-index: -2;
-        }
-
-        /* Premium Cursor */
-        .cursor-gold {
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--gold-primary);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.2s, opacity 0.2s;
-            mix-blend-mode: difference;
-        }
-
-        .cursor-gold.hover {
-            transform: scale(2);
-            background: rgba(212, 175, 55, 0.2);
-        }
-
-        /* Premium Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--charcoal);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--gold-primary), var(--gold-dark));
-            border-radius: 5px;
-        }
-
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--gold-primary);
-        }
-
-        .display-1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 5.5rem;
-            font-weight: 700;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 50%, var(--bronze) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .display-2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            position: relative;
-            display: inline-block;
-        }
-
-        .display-2::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 0;
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--gold-primary), transparent);
-        }
-
-        .lead {
-            font-size: 1.3rem;
-            font-weight: 300;
-            opacity: 0.9;
-            max-width: 800px;
-        }
-
-        .gold-text {
-            color: var(--gold-primary);
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 5rem;
-            position: relative;
-        }
-
-        .section-title .title-decoration {
-            position: absolute;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 4rem;
-            opacity: 0.05;
-            color: var(--gold-primary);
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-            white-space: nowrap;
-        }
-
-        /* Premium Header */
-        .premium-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(26, 26, 26, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-            transition: var(--transition-medium);
-        }
-
-        .header-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .logo-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .logo-icon::before {
-            content: 'AP';
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--charcoal);
-            z-index: 2;
-        }
-
-        .logo-icon::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
-            animation: shine 8s infinite linear;
-        }
-
-        @keyframes shine {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-main {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
-        }
-
-        .logo-sub {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.8rem;
-            letter-spacing: 4px;
-            color: var(--platinum);
-            margin-top: 2px;
-        }
-
-        /* Premium Navigation */
-        .premium-nav {
-            display: flex;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            color: var(--platinum);
-            text-decoration: none;
-            position: relative;
-            padding: 0.5rem 0;
-            transition: var(--transition-medium);
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-        }
-
-        .nav-link::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--gold-primary), var(--gold-secondary));
-            transition: var(--transition-medium);
-        }
-
-        .nav-link:hover {
-            color: var(--gold-primary);
-        }
-
-        .nav-link:hover::before {
-            width: 100%;
-        }
-
-        /* Premium Language Switcher */
-        .language-switcher-premium {
-            position: relative;
-        }
-
-        .language-btn-premium {
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            color: var(--gold-primary);
-            padding: 0.5rem 1.5rem;
-            border-radius: 30px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            transition: var(--transition-medium);
-            backdrop-filter: blur(10px);
-        }
-
-        .language-btn-premium:hover {
-            background: rgba(212, 175, 55, 0.2);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-gold);
-        }
-
-        .language-dropdown-premium {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: rgba(26, 26, 26, 0.95);
-            backdrop-filter: blur(20px);
-            border: var(--border-gold);
-            border-radius: 15px;
-            padding: 1rem 0;
-            min-width: 180px;
-            display: none;
-            margin-top: 1rem;
-            box-shadow: var(--shadow-heavy);
-        }
-
-        .language-dropdown-premium.active {
-            display: block;
-            animation: dropdownFade 0.3s ease;
-        }
-
-        @keyframes dropdownFade {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .language-option-premium {
-            padding: 0.8rem 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            cursor: pointer;
-            transition: var(--transition-fast);
-        }
-
-        .language-option-premium:hover {
-            background: rgba(212, 175, 55, 0.1);
-        }
-
-        .language-option-premium.active {
-            background: rgba(212, 175, 55, 0.15);
-            position: relative;
-        }
-
-        .language-option-premium.active::after {
-            content: '✓';
-            position: absolute;
-            right: 1.5rem;
-            color: var(--gold-primary);
-        }
-
-        .flag-icon {
-            width: 24px;
-            height: 16px;
-            border-radius: 2px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Premium Hero Section */
-        .premium-hero {
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            padding: 120px 2rem 5rem;
-            overflow: hidden;
-        }
-
-        .hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .hero-background::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 20%, rgba(205, 127, 50, 0.08) 0%, transparent 50%);
-        }
-
-        .hero-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            width: 100%;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-title-container {
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            padding: 0.5rem 1.5rem;
-            border-radius: 30px;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(10px);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .star-rating {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .stars {
-            display: flex;
-            gap: 0.3rem;
-        }
-
-        .stars i {
-            color: var(--gold-primary);
-            font-size: 1.2rem;
-        }
-
-        .rating-text {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.1rem;
-            color: var(--platinum);
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .btn-premium {
-            padding: 1.2rem 2.5rem;
-            border-radius: 50px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            transition: var(--transition-medium);
-            position: relative;
-            overflow: hidden;
-            letter-spacing: 1px;
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-            color: var(--charcoal);
-            border: none;
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
-        }
-
-        .btn-outline-gold {
-            background: transparent;
-            color: var(--gold-primary);
-            border: 2px solid var(--gold-primary);
-        }
-
-        .btn-outline-gold:hover {
-            background: rgba(212, 175, 55, 0.1);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-gold);
-        }
-
-        /* Premium Tabs System */
-        .premium-tabs {
-            max-width: 1400px;
-            margin: 5rem auto;
-            padding: 0 2rem;
-        }
-
-        .tabs-header {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 4rem;
-            flex-wrap: wrap;
-        }
-
-        .tab-btn {
-            padding: 1.2rem 2.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--platinum);
-            border-radius: 50px;
-            cursor: pointer;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            transition: var(--transition-medium);
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .tab-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
-            transition: var(--transition-slow);
-        }
-
-        .tab-btn:hover::before {
-            left: 100%;
-        }
-
-        .tab-btn:hover {
-            border-color: var(--gold-primary);
-            color: var(--gold-primary);
-            transform: translateY(-2px);
-        }
-
-        .tab-btn.active {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(205, 127, 50, 0.1));
-            border-color: var(--gold-primary);
-            color: var(--gold-primary);
-            box-shadow: var(--shadow-gold);
-        }
-
-        .tab-btn i {
-            font-size: 1.2rem;
-        }
-
-        .tabs-content {
-            position: relative;
-            min-height: 600px;
-        }
-
-        .tab-pane {
-            display: none;
-            animation: fadeIn 0.8s ease;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .tab-pane.active {
-            display: block;
-        }
-
-        /* Premium Features Grid */
-        .features-grid-premium {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-card-premium {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 2.5rem;
-            transition: var(--transition-medium);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card-premium::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), transparent);
-            opacity: 0;
-            transition: var(--transition-medium);
-        }
-
-        .feature-card-premium:hover {
-            transform: translateY(-10px);
-            border-color: rgba(212, 175, 55, 0.3);
-            box-shadow: var(--shadow-heavy);
-        }
-
-        .feature-card-premium:hover::before {
-            opacity: 1;
-        }
-
-        .feature-icon-premium {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-icon-premium i {
-            font-size: 2rem;
-            color: var(--charcoal);
-            position: relative;
-            z-index: 2;
-        }
-
-        .feature-icon-premium::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
-        }
-
-        /* Premium Gallery */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .gallery-item {
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            aspect-ratio: 4/3;
-            cursor: pointer;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition-slow);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 2rem;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-            transform: translateY(100%);
-            transition: var(--transition-medium);
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
-        }
-
-        /* Premium Testimonials */
-        .testimonial-slider {
-            max-width: 1000px;
-            margin: 4rem auto;
-            position: relative;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: 25px;
-            padding: 3rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: -30px;
-            left: 30px;
-            font-family: 'Playfair Display', serif;
-            font-size: 10rem;
-            color: rgba(212, 175, 55, 0.1);
-        }
-
-        .testimonial-rating {
-            color: var(--gold-primary);
-            margin-bottom: 1.5rem;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .author-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 2px solid var(--gold-primary);
-        }
-
-        /* Premium Footer */
-        .premium-footer {
-            background: rgba(0, 0, 0, 0.5);
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 5rem 2rem 2rem;
-            margin-top: 5rem;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 4rem;
-        }
-
-        .footer-column h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: linear-gradient(90deg, var(--gold-primary), transparent);
-        }
-
-        .footer-contact-list {
-            list-style: none;
-        }
-
-        .footer-contact-list li {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-contact-list i {
-            color: var(--gold-primary);
-            width: 20px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-link {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold-primary);
-            text-decoration: none;
-            transition: var(--transition-medium);
-        }
-
-        .social-link:hover {
-            background: var(--gold-primary);
-            color: var(--charcoal);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 3rem;
-            margin-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--platinum);
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .display-1 {
-                font-size: 4.5rem;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .display-1 {
-                font-size: 3.5rem;
-            }
-            
-            .display-2 {
-                font-size: 2.8rem;
-            }
-            
-            .premium-nav {
-                gap: 2rem;
-            }
-            
-            .tabs-header {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .tab-btn {
-                width: 100%;
-                max-width: 400px;
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1.5rem;
-                padding: 1rem;
-            }
-            
-            .premium-nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-            }
-            
-            .hero-cta {
-                flex-direction: column;
-            }
-            
-            .btn-premium {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .features-grid-premium {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .display-1 {
-                font-size: 2.8rem;
-            }
-            
-            .display-2 {
-                font-size: 2.2rem;
-            }
-            
-            .hero-badge {
-                flex-direction: column;
-                text-align: center;
-                padding: 1rem;
-            }
-            
-            .section-title .title-decoration {
-                font-size: 2.5rem;
-            }
-        }
-
-        /* Loading Animation */
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--charcoal);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-
-        .loader {
-            width: 80px;
-            height: 80px;
-            position: relative;
-        }
-
-        .loader-inner {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 4px solid transparent;
-            border-top-color: var(--gold-primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Particle Background */
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-    </style>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
 </head>
 <body>
     <!-- Custom Cursor -->
@@ -982,693 +27,524 @@
         </div>
     </div>
 
-    <!-- Particle Background -->
-    <div id="particles-js"></div>
-
-    <!-- Premium Header -->
-    <header class="premium-header">
-        <div class="header-content">
+    <!-- Navigation -->
+    <nav class="premium-nav" id="mainNav">
+        <div class="nav-container">
             <div class="logo-container">
-                <div class="logo-icon"></div>
-                <div class="logo-text">
-                    <div class="logo-main">AMANI PLACE</div>
-                    <div class="logo-sub">PREMIUM OFFICES</div>
+                <a href="index.html" class="logo-link">
+                    <div class="logo-icon"></div>
+                    <div class="logo-text">
+                        <div class="logo-main">AMANI PLACE</div>
+                        <div class="logo-sub">PREMIUM OFFICES</div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active lang-en">Home</a>
+                        <a href="index.html" class="nav-link active lang-sw">Nyumbani</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link lang-en">About</a>
+                        <a href="about.html" class="nav-link lang-sw">Kuhusu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="spaces.html" class="nav-link lang-en">Spaces</a>
+                        <a href="spaces.html" class="nav-link lang-sw">Nafasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="amenities.html" class="nav-link lang-en">Amenities</a>
+                        <a href="amenities.html" class="nav-link lang-sw">Vifaa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link lang-en">Gallery</a>
+                        <a href="gallery.html" class="nav-link lang-sw">Picha</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link lang-en">Contact</a>
+                        <a href="contact.html" class="nav-link lang-sw">Mawasiliano</a>
+                    </li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <div class="language-switcher">
+                        <button class="language-btn" id="languageBtn">
+                            <span id="currentLanguage">EN</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <div class="language-option active" data-lang="en">
+                                <div class="flag-icon" style="background: linear-gradient(180deg, #012169 0%, #C8102E 50%, #FFFFFF 100%);"></div>
+                                <span class="lang-en">English</span>
+                                <span class="lang-sw">Kiingereza</span>
+                            </div>
+                            <div class="language-option" data-lang="sw">
+                                <div class="flag-icon" style="background: linear-gradient(180deg, #1EB53A 0%, #00A3DD 33%, #000000 33%, #000000 66%, #00A3DD 66%);"></div>
+                                <span class="lang-en">Swahili</span>
+                                <span class="lang-sw">Kiswahili</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html#tour" class="btn-nav">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="lang-en">Book Tour</span>
+                        <span class="lang-sw">Panga Ziara</span>
+                    </a>
                 </div>
             </div>
             
-            <nav class="premium-nav">
-                <a href="#home" class="nav-link lang-en">Home</a>
-                <a href="#home" class="nav-link lang-sw">Nyumbani</a>
-                <a href="#about" class="nav-link lang-en">About</a>
-                <a href="#about" class="nav-link lang-sw">Kuhusu</a>
-                <a href="#spaces" class="nav-link lang-en">Spaces</a>
-                <a href="#spaces" class="nav-link lang-sw">Nafasi</a>
-                <a href="#amenities" class="nav-link lang-en">Amenities</a>
-                <a href="#amenities" class="nav-link lang-sw">Vifaa</a>
-                <a href="#gallery" class="nav-link lang-en">Gallery</a>
-                <a href="#gallery" class="nav-link lang-sw">Picha</a>
-                <a href="#contact" class="nav-link lang-en">Contact</a>
-                <a href="#contact" class="nav-link lang-sw">Mawasiliano</a>
-                
-                <div class="language-switcher-premium">
-                    <button class="language-btn-premium" id="languageBtnPremium">
-                        <span id="currentLanguage">EN</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="language-dropdown-premium" id="languageDropdownPremium">
-                        <div class="language-option-premium active" data-lang="en">
-                            <div class="flag-icon" style="background: linear-gradient(180deg, #012169 0%, #C8102E 50%, #FFFFFF 100%);"></div>
-                            <span class="lang-en">English</span>
-                            <span class="lang-sw">Kiingereza</span>
-                        </div>
-                        <div class="language-option-premium" data-lang="sw">
-                            <div class="flag-icon" style="background: linear-gradient(180deg, #1EB53A 0%, #00A3DD 33%, #000000 33%, #000000 66%, #00A3DD 66%);"></div>
-                            <span class="lang-en">Swahili</span>
-                            <span class="lang-sw">Kiswahili</span>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="premium-hero" id="home">
-        <div class="hero-background"></div>
+    <section class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="hero-video">
+                <!-- Video background would be here -->
+            </div>
+        </div>
+        
         <div class="hero-content">
-            <div class="hero-title-container">
-                <div class="hero-badge">
-                    <i class="fas fa-crown gold-text"></i>
-                    <span class="lang-en">PREMIUM BUSINESS CENTER</span>
-                    <span class="lang-sw">KITUO CHA BIASHARA CHA HAKI ZAIDI</span>
-                </div>
-                
-                <h1 class="display-1">
-                    <span class="lang-en">The Pinnacle of</span>
-                    <span class="lang-sw">Kilele cha</span>
-                    <br>
-                    <span class="lang-en">Office Excellence</span>
-                    <span class="lang-sw">Ubora wa Ofisi</span>
-                </h1>
-                
-                <p class="lead lang-en">
-                    Experience unparalleled luxury and sophistication in Dar es Salaam's most exclusive business address. 
-                    Where gold standards meet platinum service.
-                </p>
-                <p class="lead lang-sw">
-                    Pata anasa isiyo na kifani na ustadi katika anwani ya biashara ya kipekee zaidi ya Dar es Salaam. 
-                    Ambapo viwango vya dhahabu hukutana na huduma ya platinamu.
-                </p>
-                
-                <div class="star-rating">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="rating-text">
-                        <span class="lang-en">Rated 4.7/5 by 850+ executives</span>
-                        <span class="lang-sw">Imekadiriwa 4.7/5 na watendaji 850+</span>
-                    </div>
-                </div>
+            <div class="hero-badge">
+                <i class="fas fa-crown"></i>
+                <span class="lang-en">DAR ES SALAAM'S FINEST</span>
+                <span class="lang-sw">BORA KATIKA DAR ES SALAAM</span>
             </div>
             
+            <h1 class="hero-title">
+                <span class="lang-en">Redefining</span>
+                <span class="lang-sw">Kufafanua Upya</span>
+                <br>
+                <span class="lang-en">Business Excellence</span>
+                <span class="lang-sw">Ubora wa Biashara</span>
+            </h1>
+            
+            <p class="hero-subtitle lang-en">
+                Tanzania's premier destination for executive offices, boardrooms, and premium business amenities.
+                Where success finds its perfect environment.
+            </p>
+            <p class="hero-subtitle lang-sw">
+                Lengo kuu la Tanzania kwa ofisi za utawala, vyumba vya bodi, na vifaa bora vya biashara.
+                Ambapo mafanikio hupata mazingira yake kamili.
+            </p>
+            
             <div class="hero-cta">
-                <a href="#spaces" class="btn-premium btn-gold">
-                    <i class="fas fa-eye"></i>
+                <a href="spaces.html" class="btn-primary">
+                    <i class="fas fa-building"></i>
                     <span class="lang-en">Explore Spaces</span>
                     <span class="lang-sw">Gundua Nafasi</span>
                 </a>
-                <a href="#contact" class="btn-premium btn-outline-gold">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span class="lang-en">Schedule Tour</span>
-                    <span class="lang-sw">Panga Ziara</span>
+                <a href="contact.html#tour" class="btn-secondary">
+                    <i class="fas fa-play-circle"></i>
+                    <span class="lang-en">Virtual Tour</span>
+                    <span class="lang-sw">Ziara Mtandaoni</span>
+                </a>
+            </div>
+            
+            <div class="hero-features">
+                <div class="feature-item">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <span class="lang-en">4.8/5 Rating</span>
+                        <span class="lang-sw">Ukadirifu 4.8/5</span>
+                        <small class="lang-en">From 850+ reviews</small>
+                        <small class="lang-sw">Kutoka kwa hakiki 850+</small>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-building"></i>
+                    <div>
+                        <span class="lang-en">12 Floors</span>
+                        <span class="lang-sw">Sakafu 12</span>
+                        <small class="lang-en">Premium Office Space</small>
+                        <small class="lang-sw">Nafasi Bora ya Ofisi</small>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <span class="lang-en">200+ Companies</span>
+                        <span class="lang-sw">Kampuni 200+</span>
+                        <small class="lang-en">Trust Our Spaces</small>
+                        <small class="lang-sw">Tumaini Nafasi Zetu</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll">
+            <span class="lang-en">Scroll to Discover</span>
+            <span class="lang-sw">Songa Kushughulikia Ugunduzi</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Featured Spaces -->
+    <section class="featured-spaces">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label lang-en">PREMIUM SELECTION</span>
+                <span class="section-label lang-sw">UCHAGUZI BORA</span>
+                <h2 class="section-title">
+                    <span class="lang-en">Featured Workspaces</span>
+                    <span class="lang-sw">Maeneo ya Kazi Yanayovutia</span>
+                </h2>
+                <p class="section-description lang-en">
+                    Experience our most sought-after office environments, designed for productivity and prestige
+                </p>
+                <p class="section-description lang-sw">
+                    Pata uzoefu wa mazingira yetu ya ofisi yanayotafutwa sana, yaliyoundwa kwa uzalishaji na hadhi
+                </p>
+            </div>
+            
+            <div class="spaces-grid">
+                <div class="space-card">
+                    <div class="space-image">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Executive Office">
+                        <div class="space-overlay">
+                            <a href="spaces.html#executive" class="btn-view">
+                                <span class="lang-en">View Details</span>
+                                <span class="lang-sw">Angalia Maelezo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="space-content">
+                        <h3 class="space-title lang-en">Executive Corner Office</h3>
+                        <h3 class="space-title lang-sw">Ofisi ya Kona ya Utawala</h3>
+                        <p class="space-description lang-en">
+                            Panoramic views, custom furnishings, private balcony, and dedicated support
+                        </p>
+                        <p class="space-description lang-sw">
+                            Maonyesho ya panorama, samani maalum, balcony binafsi, na usaidizi uliojitosheleza
+                        </p>
+                        <div class="space-meta">
+                            <span><i class="fas fa-expand-arrows-alt"></i> 850 sq.ft.</span>
+                            <span><i class="fas fa-user-friends"></i> 1-4 People</span>
+                            <span><i class="fas fa-tag"></i> $3,500/month</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-card">
+                    <div class="space-image">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Boardroom">
+                        <div class="space-overlay">
+                            <a href="spaces.html#boardroom" class="btn-view">
+                                <span class="lang-en">View Details</span>
+                                <span class="lang-sw">Angalia Maelezo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="space-content">
+                        <h3 class="space-title lang-en">Sovereign Boardroom</h3>
+                        <h3 class="space-title lang-sw">Chumba cha Bodi cha Enzi</h3>
+                        <p class="space-description lang-en">
+                            State-of-the-art technology, executive seating, and premium presentation systems
+                        </p>
+                        <p class="space-description lang-sw">
+                            Teknolojia ya kisasa, viti vya utawala, na mifumo bora ya uwasilishaji
+                        </p>
+                        <div class="space-meta">
+                            <span><i class="fas fa-expand-arrows-alt"></i> 1,200 sq.ft.</span>
+                            <span><i class="fas fa-user-friends"></i> 20 People</span>
+                            <span><i class="fas fa-tag"></i> $250/hour</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-card">
+                    <div class="space-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Coworking">
+                        <div class="space-overlay">
+                            <a href="spaces.html#coworking" class="btn-view">
+                                <span class="lang-en">View Details</span>
+                                <span class="lang-sw">Angalia Maelezo</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="space-content">
+                        <h3 class="space-title lang-en">Premium Coworking</h3>
+                        <h3 class="space-title lang-sw">Kushirikiana Kazi Bora</h3>
+                        <p class="space-description lang-en">
+                            Flexible workspace with premium amenities, networking events, and business support
+                        </p>
+                        <p class="space-description lang-sw">
+                            Nafasi ya kazi rahisi na vifaa bora, hafla za mitandao, na usaidizi wa biashara
+                        </p>
+                        <div class="space-meta">
+                            <span><i class="fas fa-expand-arrows-alt"></i> Flexible</span>
+                            <span><i class="fas fa-user-friends"></i> Individual</span>
+                            <span><i class="fas fa-tag"></i> $450/month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer">
+                <a href="spaces.html" class="btn-outline">
+                    <span class="lang-en">View All Spaces</span>
+                    <span class="lang-sw">Angalia Nafasi Zote</span>
+                    <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Premium Tabs Section -->
-    <section class="premium-tabs" id="spaces">
-        <div class="section-title">
-            <div class="title-decoration lang-en">EXCLUSIVE SPACES</div>
-            <div class="title-decoration lang-sw">NAFASI ZA KIPEKEE</div>
-            <h2 class="display-2">
-                <span class="lang-en">Curated Workspaces</span>
-                <span class="lang-sw">Maeneo ya Kazi Yanayochaguliwa</span>
-            </h2>
-            <p class="lead">
-                <span class="lang-en">Tailored environments designed for success, productivity, and prestige</span>
-                <span class="lang-sw">Mazingira yaliyobinafsishwa yaliyoundwa kwa mafanikio, uzalishaji, na hadhi</span>
-            </p>
-        </div>
-        
-        <div class="tabs-header">
-            <button class="tab-btn active" data-tab="private-offices">
-                <i class="fas fa-building"></i>
-                <span class="lang-en">Private Offices</span>
-                <span class="lang-sw">Ofisi Binafsi</span>
-            </button>
-            <button class="tab-btn" data-tab="meeting-rooms">
-                <i class="fas fa-users"></i>
-                <span class="lang-en">Board Rooms</span>
-                <span class="lang-sw">Vyumba vya Bodi</span>
-            </button>
-            <button class="tab-btn" data-tab="coworking">
-                <i class="fas fa-desktop"></i>
-                <span class="lang-en">Coworking</span>
-                <span class="lang-sw">Kushirikiana Kazi</span>
-            </button>
-            <button class="tab-btn" data-tab="virtual">
-                <i class="fas fa-globe"></i>
-                <span class="lang-en">Virtual Offices</span>
-                <span class="lang-sw">Ofisi Mtandaoni</span>
-            </button>
-            <button class="tab-btn" data-tab="suites">
-                <i class="fas fa-door-open"></i>
-                <span class="lang-en">Executive Suites</span>
-                <span class="lang-sw">Suti za Utawala</span>
-            </button>
-        </div>
-        
-        <div class="tabs-content">
-            <!-- Private Offices Tab -->
-            <div class="tab-pane active" id="private-offices">
-                <div class="features-grid-premium">
-                    <div class="feature-card-premium">
-                        <div class="feature-icon-premium">
-                            <i class="fas fa-chess-queen"></i>
-                        </div>
-                        <h3 class="lang-en">Corner Office Elite</h3>
-                        <h3 class="lang-sw">Ofisi ya Kona ya Wataalamu</h3>
-                        <p class="lang-en">
-                            Panoramic city views, custom mahogany furnishings, private balcony, 
-                            and dedicated executive assistant. Starting at $3,500/month.
-                        </p>
-                        <p class="lang-sw">
-                            Maonyesho ya jiji yanayozunguka, samani maalum za mvhuli, balcony binafsi, 
-                            na msaidizi wa utawala anayejitolea. Kuanzia $3,500/kwa mwezi.
-                        </p>
+    <!-- Premium Amenities -->
+    <section class="premium-amenities">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label lang-en">BEYOND OFFICE SPACE</span>
+                <span class="section-label lang-sw">ZAIDI YA NAFASI YA OFISI</span>
+                <h2 class="section-title">
+                    <span class="lang-en">Platinum Amenities</span>
+                    <span class="lang-sw">Vifaa vya Platinamu</span>
+                </h2>
+            </div>
+            
+            <div class="amenities-grid">
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-concierge-bell"></i>
                     </div>
-                    
-                    <div class="feature-card-premium">
-                        <div class="feature-icon-premium">
-                            <i class="fas fa-gem"></i>
-                        </div>
-                        <h3 class="lang-en">Signature Suite</h3>
-                        <h3 class="lang-sw">Suti ya Sahihi</h3>
-                        <p class="lang-en">
-                            Bespoke design with Italian leather, smart glass partitions, 
-                            integrated AV systems, and private lounge. Starting at $2,800/month.
-                        </p>
-                        <p class="lang-sw">
-                            Muundo maalum na ngozi ya Italia, vizuizi vya glasi smart, 
-                            mifumo iliyounganishwa ya AV, na sebule binafsi. Kuanzia $2,800/kwa mwezi.
-                        </p>
+                    <h3 class="amenity-title lang-en">24/7 Concierge</h3>
+                    <h3 class="amenity-title lang-sw">Msimamizi 24/7</h3>
+                    <p class="amenity-description lang-en">
+                        Personal assistants, travel planning, and exclusive lifestyle management
+                    </p>
+                    <p class="amenity-description lang-sw">
+                        Wasaidizi binafsi, upangaji wa safari, na usimamizi wa kipekee wa mtindo wa maisha
+                    </p>
+                </div>
+                
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-wifi"></i>
                     </div>
-                    
-                    <div class="feature-card-premium">
-                        <div class="feature-icon-premium">
-                            <i class="fas fa-city"></i>
-                        </div>
-                        <h3 class="lang-en">Team Cluster</h3>
-                        <h3 class="lang-sw">Kikundi cha Timu</h3>
-                        <p class="lang-en">
-                            4-12 person offices with collaborative zones, soundproofing, 
-                            and dedicated project rooms. Starting at $450/person/month.
-                        </p>
-                        <p class="lang-sw">
-                            Ofisi za watu 4-12 na maeneo ya ushirikiano, upambanuzi wa sauti, 
-                            na vyumba maalum vya mradi. Kuanzia $450/mtu/kwa mwezi.
-                        </p>
+                    <h3 class="amenity-title lang-en">Enterprise WiFi</h3>
+                    <h3 class="amenity-title lang-sw">WiFi ya Biashara</h3>
+                    <p class="amenity-description lang-en">
+                        Gigabit fiber optic with dedicated bandwidth and 99.9% uptime guarantee
+                    </p>
+                    <p class="amenity-description lang-sw">
+                        Fiber optic ya gigabit na bandwidth maalum na dhamana ya muda wa kufanya kazi 99.9%
+                    </p>
+                </div>
+                
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-utensils"></i>
                     </div>
+                    <h3 class="amenity-title lang-en">Executive Lounge</h3>
+                    <h3 class="amenity-title lang-sw">Sebule ya Utawala</h3>
+                    <p class="amenity-description lang-en">
+                        Curated refreshments, private chef services, and sommelier wine selection
+                    </p>
+                    <p class="amenity-description lang-sw">
+                        Vinywaji vilivyochaguliwa, huduma za mpishi binafsi, na uchaguzi wa mvinyo wa sommelier
+                    </p>
+                </div>
+                
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="amenity-title lang-en">Wellness Center</h3>
+                    <h3 class="amenity-title lang-sw">Kituo cha Ustawi</h3>
+                    <p class="amenity-description lang-en">
+                        Yoga studio, massage therapy, fitness center, and wellness consultations
+                    </p>
+                    <p class="amenity-description lang-sw">
+                        Studio ya yoga, tiba ya mikunjo, kituo cha mazoezi, na ushauri wa ustawi
+                    </p>
                 </div>
             </div>
             
-            <!-- Meeting Rooms Tab -->
-            <div class="tab-pane" id="meeting-rooms">
-                <div class="features-grid-premium">
-                    <div class="feature-card-premium">
-                        <div class="feature-icon-premium">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                        <h3 class="lang-en">Boardroom Sovereign</h3>
-                        <h3 class="lang-sw">Chumba cha Bodi cha Enzi</h3>
-                        <p class="lang-en">
-                            20-person capacity, 4K holographic display, simultaneous translation, 
-                            and butler service. $250/hour.
-                        </p>
-                        <p class="lang-sw">
-                            Uwezo wa watu 20, onyesho la holografu 4K, tafsiri ya wakati mmoja, 
-                            na huduma ya mkarani. $250/kwa saa.
-                        </p>
-                    </div>
-                    
-                    <div class="feature-card-premium">
-                        <div class="feature-icon-premium">
-                            <i class="fas fa-video"></i>
-                        </div>
-                        <h3 class="lang-en">Telepresence Theater</h3>
-                        <h3 class="lang-sw">Ukumbi wa Kujihusisha Kwa Mbali</h3>
-                        <p class="lang-en">
-                            Immersive 360° video conferencing, 8K resolution, 
-                            spatial audio, and AI-powered meeting assistant. $180/hour.
-                        </p>
-                        <p class="lang-sw">
-                            Mkutano wa video wa kuzamisha 360°, azimio la 8K, 
-                            sauti ya anga, na msaidizi wa mkutano unaoongozwa na AI. $180/kwa saa.
-                        </p>
-                    </div>
-                    
-                    <div class="feature-card-premium">
-                        <div class="feature-icon-premium">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3 class="lang-en">Strategy Salon</h3>
-                        <h3 class="lang-sw">Saluni ya Mkakati</h3>
-                        <p class="lang-en">
-                            Intimate 8-person room with writable glass walls, 
-                            biometric access, and curated refreshments. $120/hour.
-                        </p>
-                        <p class="lang-sw">
-                            Chumba cha karibu cha watu 8 na kuta za glasi zinazoweza kuandikiwa, 
-                            ufikiaji wa kibayometriki, na vinywaji vilivyochaguliwa. $120/kwa saa.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Additional tabs would follow same structure -->
-        </div>
-    </section>
-
-    <!-- Amenities Section -->
-    <section class="premium-tabs" id="amenities">
-        <div class="section-title">
-            <div class="title-decoration lang-en">PLATINUM AMENITIES</div>
-            <div class="title-decoration lang-sw">VIFAA VYA PLATINAMU</div>
-            <h2 class="display-2">
-                <span class="lang-en">Beyond Expectations</span>
-                <span class="lang-sw">Zaidi ya Matarajio</span>
-            </h2>
-            <p class="lead">
-                <span class="lang-en">Every detail curated for the discerning professional</span>
-                <span class="lang-sw">Kila undani limechaguliwa kwa mtaalamu mwenye busara</span>
-            </p>
-        </div>
-        
-        <div class="features-grid-premium">
-            <div class="feature-card-premium">
-                <div class="feature-icon-premium">
-                    <i class="fas fa-concierge-bell"></i>
-                </div>
-                <h3 class="lang-en">24/7 Concierge</h3>
-                <h3 class="lang-sw">Msimamizi 24/7</h3>
-                <p class="lang-en">
-                    Personal assistants, travel planning, event coordination, 
-                    and exclusive lifestyle management.
-                </p>
-                <p class="lang-sw">
-                    Wasaidizi binafsi, upangaji wa safari, uratibu wa hafla, 
-                    na usimamizi wa kipekee wa mtindo wa maisha.
-                </p>
-            </div>
-            
-            <div class="feature-card-premium">
-                <div class="feature-icon-premium">
-                    <i class="fas fa-wine-glass-alt"></i>
-                </div>
-                <h3 class="lang-en">Executive Lounge</h3>
-                <h3 class="lang-sw">Sebule ya Utawala</h3>
-                <p class="lang-en">
-                    Sommelier-curated wine cellar, artisan coffee bar, 
-                    and private chef tasting menus.
-                </p>
-                <p class="lang-sw">
-                    Bodi ya mvinyo iliyochaguliwa na mtaalamu wa mvinyo, baa ya kahawa ya fundi, 
-                    na menyu za kupima za mpishi binafsi.
-                </p>
-            </div>
-            
-            <div class="feature-card-premium">
-                <div class="feature-icon-premium">
-                    <i class="fas fa-spa"></i>
-                </div>
-                <h3 class="lang-en">Wellness Center</h3>
-                <h3 class="lang-sw">Kituo cha Ustawi</h3>
-                <p class="lang-en">
-                    Private yoga studio, cryotherapy chamber, massage suites, 
-                    and nutritional counseling.
-                </p>
-                <p class="lang-sw">
-                    Studio binafsi ya yoga, chumba cha tiba ya baridi, suti za mikunjo, 
-                    na ushauri wa lishe.
-                </p>
+            <div class="section-footer">
+                <a href="amenities.html" class="btn-link">
+                    <span class="lang-en">Explore All Amenities</span>
+                    <span class="lang-sw">Gundua Vifaa Vyote</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="premium-tabs" id="gallery">
-        <div class="section-title">
-            <div class="title-decoration lang-en">VISUAL ELEGANCE</div>
-            <div class="title-decoration lang-sw">UZURI WA KIONGO</div>
-            <h2 class="display-2">
-                <span class="lang-en">Architectural Masterpiece</span>
-                <span class="lang-sw">Kazi ya Ufundi ya Usanifu</span>
-            </h2>
-        </div>
-        
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Lobby">
-                <div class="gallery-overlay">
-                    <h4 class="lang-en">Grand Lobby</h4>
-                    <h4 class="lang-sw">Lobi Kubwa</h4>
-                </div>
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label lang-en">CLIENT SUCCESS</span>
+                <span class="section-label lang-sw">MAFANIKIO YA MWANAHA</span>
+                <h2 class="section-title">
+                    <span class="lang-en">Trusted by Leaders</span>
+                    <span class="lang-sw">Imeaminika na Viongozi</span>
+                </h2>
             </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" alt="Meeting Room">
-                <div class="gallery-overlay">
-                    <h4 class="lang-en">Boardroom</h4>
-                    <h4 class="lang-sw">Chumba cha Bodi</h4>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Lounge">
-                <div class="gallery-overlay">
-                    <h4 class="lang-en">Executive Lounge</h4>
-                    <h4 class="lang-sw">Sebule ya Utawala</h4>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text lang-en">
+                            "Amani Place transformed our business operations. The premium facilities and exceptional service have elevated our brand presence in East Africa."
+                        </p>
+                        <p class="testimonial-text lang-sw">
+                            "Amani Place ilibadilisha shughuli zetu za biashara. Vifaa bora na huduma bora vimeinua uwepo wa chapa yetu katika Afrika Mashariki."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="CEO">
+                            </div>
+                            <div class="author-info">
+                                <h4>James Mwenda</h4>
+                                <p class="lang-en">CEO, Pan African Ventures</p>
+                                <p class="lang-sw">Mkurugenzi Mtendaji, Pan African Ventures</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="premium-tabs" id="contact">
-        <div class="section-title">
-            <div class="title-decoration lang-en">ELEVATE YOUR BUSINESS</div>
-            <div class="title-decoration lang-sw">INUA BIASHARA YAKO</div>
-            <h2 class="display-2">
-                <span class="lang-en">Begin Your Legacy</span>
-                <span class="lang-sw">Anzisha Urithi Wako</span>
-            </h2>
-            <p class="lead">
-                <span class="lang-en">Schedule a private tour and experience excellence firsthand</span>
-                <span class="lang-sw">Panga ziara binafsi na ujione ubora mwenyewe</span>
-            </p>
-        </div>
-        
-        <div class="features-grid-premium">
-            <div class="feature-card-premium">
-                <div class="feature-icon-premium">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <h3 class="lang-en">Location</h3>
-                <h3 class="lang-sw">Eneo</h3>
-                <p>
-                    Ohio Street, Office Park<br>
-                    Dar es Salaam, Tanzania
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">
+                    <span class="lang-en">Ready to Elevate Your Business?</span>
+                    <span class="lang-sw">Tayari Kuinua Biashara Yako?</span>
+                </h2>
+                <p class="cta-description lang-en">
+                    Schedule a private tour and experience the Amani Place difference today
                 </p>
-            </div>
-            
-            <div class="feature-card-premium">
-                <div class="feature-icon-premium">
-                    <i class="fas fa-phone-alt"></i>
-                </div>
-                <h3 class="lang-en">Contact</h3>
-                <h3 class="lang-sw">Mawasiliano</h3>
-                <p>
-                    +255 715 023 799<br>
-                    <span class="lang-en">Mon-Fri: 8AM-8PM</span>
-                    <span class="lang-sw">Jumatatu-Ijumaa: Saa 8 asubuhi-8 jioni</span>
+                <p class="cta-description lang-sw">
+                    Panga ziara binafsi na upate uzoefu wa tofauti ya Amani Place leo
                 </p>
-            </div>
-            
-            <div class="feature-card-premium">
-                <div class="feature-icon-premium">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <h3 class="lang-en">Exclusive Inquiry</h3>
-                <h3 class="lang-sw">Uchunguzi wa Kipekee</h3>
-                <p>
-                    concierge@amanipalce.tz<br>
-                    <span class="lang-en">Priority response within 2 hours</span>
-                    <span class="lang-sw">Jibu la kipaumbele ndani ya masaa 2</span>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Premium Footer -->
-    <footer class="premium-footer">
-        <div class="footer-content">
-            <div class="footer-column">
-                <h3 class="lang-en">Amani Place</h3>
-                <h3 class="lang-sw">Amani Place</h3>
-                <p class="lang-en">
-                    The definitive address for business excellence in East Africa. 
-                    Where ambition finds its perfect environment.
-                </p>
-                <p class="lang-sw">
-                    Anwani ya hakika ya ubora wa biashara katika Afrika Mashariki. 
-                    Ambapo azma hupata mazingira yake kamili.
-                </p>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-column">
-                <h3 class="lang-en">Quick Links</h3>
-                <h3 class="lang-sw">Viungo vya Haraka</h3>
-                <ul class="footer-contact-list">
-                    <li><a href="#home" class="nav-link lang-en">Home</a><a href="#home" class="nav-link lang-sw">Nyumbani</a></li>
-                    <li><a href="#spaces" class="nav-link lang-en">Spaces</a><a href="#spaces" class="nav-link lang-sw">Nafasi</a></li>
-                    <li><a href="#amenities" class="nav-link lang-en">Amenities</a><a href="#amenities" class="nav-link lang-sw">Vifaa</a></li>
-                    <li><a href="#gallery" class="nav-link lang-en">Gallery</a><a href="#gallery" class="nav-link lang-sw">Picha</a></li>
-                    <li><a href="#contact" class="nav-link lang-en">Contact</a><a href="#contact" class="nav-link lang-sw">Mawasiliano</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h3 class="lang-en">Connect</h3>
-                <h3 class="lang-sw">Ungana</h3>
-                <ul class="footer-contact-list">
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Ohio Street, Office Park<br>Dar es Salaam</span>
-                    </li>
-                    <li>
+                <div class="cta-buttons">
+                    <a href="contact.html#tour" class="btn-primary">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="lang-en">Book Private Tour</span>
+                        <span class="lang-sw">Panga Ziara Binafsi</span>
+                    </a>
+                    <a href="contact.html" class="btn-outline">
                         <i class="fas fa-phone-alt"></i>
-                        <span>+255 715 023 799</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <span>concierge@amanipalce.tz</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-clock"></i>
-                        <span class="lang-en">Mon-Fri: 8AM-8PM</span>
-                        <span class="lang-sw">Jumatatu-Ijumaa: 8AM-8PM</span>
-                    </li>
-                </ul>
+                        <span class="lang-en">Contact Us</span>
+                        <span class="lang-sw">Wasiliana Nasi</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="premium-footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <div class="logo-icon"></div>
+                            <div class="logo-text">
+                                <div class="logo-main">AMANI PLACE</div>
+                                <div class="logo-sub">PREMIUM OFFICES</div>
+                            </div>
+                        </div>
+                        <p class="footer-description lang-en">
+                            Tanzania's premier business center offering premium office spaces, executive amenities, and unparalleled service in Dar es Salaam.
+                        </p>
+                        <p class="footer-description lang-sw">
+                            Kituo kikuu cha biashara cha Tanzania kinachotoa nafasi bora za ofisi, vifaa vya utawala, na huduma isiyo na kifani katika Dar es Salaam.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-title lang-en">Quick Links</h3>
+                        <h3 class="footer-title lang-sw">Viungo vya Haraka</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html" class="footer-link lang-en">Home</a><a href="index.html" class="footer-link lang-sw">Nyumbani</a></li>
+                            <li><a href="about.html" class="footer-link lang-en">About Us</a><a href="about.html" class="footer-link lang-sw">Kuhusu Sisi</a></li>
+                            <li><a href="spaces.html" class="footer-link lang-en">Office Spaces</a><a href="spaces.html" class="footer-link lang-sw">Nafasi za Ofisi</a></li>
+                            <li><a href="amenities.html" class="footer-link lang-en">Amenities</a><a href="amenities.html" class="footer-link lang-sw">Vifaa</a></li>
+                            <li><a href="gallery.html" class="footer-link lang-en">Gallery</a><a href="gallery.html" class="footer-link lang-sw">Picha</a></li>
+                            <li><a href="contact.html" class="footer-link lang-en">Contact</a><a href="contact.html" class="footer-link lang-sw">Mawasiliano</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-title lang-en">Office Spaces</h3>
+                        <h3 class="footer-title lang-sw">Nafasi za Ofisi</h3>
+                        <ul class="footer-links">
+                            <li><a href="spaces.html#private" class="footer-link lang-en">Private Offices</a><a href="spaces.html#private" class="footer-link lang-sw">Ofisi Binafsi</a></li>
+                            <li><a href="spaces.html#meeting" class="footer-link lang-en">Meeting Rooms</a><a href="spaces.html#meeting" class="footer-link lang-sw">Vyumba vya Mikutano</a></li>
+                            <li><a href="spaces.html#coworking" class="footer-link lang-en">Coworking Spaces</a><a href="spaces.html#coworking" class="footer-link lang-sw">Nafasi za Kushirikiana Kazi</a></li>
+                            <li><a href="spaces.html#virtual" class="footer-link lang-en">Virtual Offices</a><a href="spaces.html#virtual" class="footer-link lang-sw">Ofisi Mtandaoni</a></li>
+                            <li><a href="spaces.html#suites" class="footer-link lang-en">Executive Suites</a><a href="spaces.html#suites" class="footer-link lang-sw">Suti za Utawala</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3 class="footer-title lang-en">Contact Info</h3>
+                        <h3 class="footer-title lang-sw">Taarifa za Mawasiliano</h3>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Ohio Street, Office Park<br>Dar es Salaam, Tanzania</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+255 715 023 799</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@amanipalce.tz</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span class="lang-en">Mon-Fri: 8AM-8PM</span>
+                                <span class="lang-sw">Jumatatu-Ijumaa: 8AM-8PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <div class="copyright">
-            <p class="lang-en">© 2024 Amani Place Premium. All rights reserved. | Elevating Business in East Africa</p>
-            <p class="lang-sw">© 2024 Amani Place Premium. Haki zote zimehifadhiwa. | Kuinua Biashara katika Afrika Mashariki</p>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright lang-en">
+                        © 2024 Amani Place Premium. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                    </p>
+                    <p class="copyright lang-sw">
+                        © 2024 Amani Place Premium. Haki zote zimehifadhiwa. | <a href="#">Sera ya Faragha</a> | <a href="#">Masharti ya Huduma</a>
+                    </p>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Premium JavaScript -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        // Preloader
-        window.addEventListener('load', () => {
-            const preloader = document.querySelector('.preloader');
-            setTimeout(() => {
-                preloader.style.opacity = '0';
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                }, 500);
-            }, 1500);
-        });
-
-        // Custom Cursor
-        const cursor = document.querySelector('.cursor-gold');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-
-        document.querySelectorAll('a, button, .tab-btn, .language-btn-premium, .gallery-item').forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                cursor.classList.add('hover');
-            });
-            element.addEventListener('mouseleave', () => {
-                cursor.classList.remove('hover');
-            });
-        });
-
-        // Particles Background
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 40, density: { enable: true, value_area: 800 } },
-                color: { value: "#D4AF37" },
-                shape: { type: "circle" },
-                opacity: { value: 0.3, random: true },
-                size: { value: 3, random: true },
-                line_linked: { enable: false },
-                move: { enable: true, speed: 1, direction: "none", random: true }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: { enable: true, mode: "repulse" },
-                    onclick: { enable: true, mode: "push" }
-                }
-            }
-        });
-
-        // Language Switching System
-        let activeLanguage = 'en';
-        
-        const languageBtn = document.getElementById('languageBtnPremium');
-        const languageDropdown = document.getElementById('languageDropdownPremium');
-        
-        languageBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            languageDropdown.classList.toggle('active');
-        });
-        
-        document.addEventListener('click', () => {
-            languageDropdown.classList.remove('active');
-        });
-        
-        languageDropdown.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
-        
-        document.querySelectorAll('.language-option-premium').forEach(option => {
-            option.addEventListener('click', () => {
-                const lang = option.getAttribute('data-lang');
-                switchLanguage(lang);
-                
-                document.querySelectorAll('.language-option-premium').forEach(opt => {
-                    opt.classList.remove('active');
-                });
-                option.classList.add('active');
-                
-                languageDropdown.classList.remove('active');
-            });
-        });
-        
-        function switchLanguage(lang) {
-            activeLanguage = lang;
-            document.getElementById('currentLanguage').textContent = lang.toUpperCase();
-            
-            // Show/hide language-specific content
-            document.querySelectorAll('.lang-en').forEach(element => {
-                element.style.display = lang === 'en' ? 'block' : 'none';
-            });
-            
-            document.querySelectorAll('.lang-sw').forEach(element => {
-                element.style.display = lang === 'sw' ? 'block' : 'none';
-            });
-            
-            localStorage.setItem('amanipalce-language', lang);
-        }
-        
-        // Check saved language preference
-        const savedLanguage = localStorage.getItem('amanipalce-language');
-        if (savedLanguage) {
-            switchLanguage(savedLanguage);
-            document.querySelectorAll('.language-option-premium').forEach(option => {
-                if (option.getAttribute('data-lang') === savedLanguage) {
-                    option.classList.add('active');
-                } else {
-                    option.classList.remove('active');
-                }
-            });
-        }
-
-        // Premium Tabs System
-        document.querySelectorAll('.tab-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                const tabId = button.getAttribute('data-tab');
-                
-                // Update active tab button
-                document.querySelectorAll('.tab-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                button.classList.add('active');
-                
-                // Show corresponding tab content
-                document.querySelectorAll('.tab-pane').forEach(pane => {
-                    pane.classList.remove('active');
-                });
-                document.getElementById(tabId).classList.add('active');
-            });
-        });
-
-        // Header Scroll Effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.premium-header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(26, 26, 26, 0.98)';
-                header.style.backdropFilter = 'blur(20px)';
-            } else {
-                header.style.background = 'rgba(26, 26, 26, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-            }
-        });
-
-        // Smooth Scrolling with Offset
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const headerHeight = document.querySelector('.premium-header').offsetHeight;
-                    const targetPosition = targetElement.offsetTop - headerHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Parallax Effect
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const heroBackground = document.querySelector('.hero-background');
-            heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
-        });
-
-        // Intersection Observer for Animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.feature-card-premium, .gallery-item, .section-title').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Gold Shimmer Effect
-        document.querySelectorAll('.gold-text, .btn-gold').forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                element.style.textShadow = '0 0 30px rgba(212, 175, 55, 0.8)';
-            });
-            element.addEventListener('mouseleave', () => {
-                element.style.textShadow = '0 0 20px rgba(212, 175, 55, 0.3)';
-            });
-        });
-
-        // Console Welcome Message
-        console.log('%c✨ AMANI PLACE PREMIUM ✨', 'font-size: 24px; color: #D4AF37; font-weight: bold;');
-        console.log('%cWelcome to the pinnacle of office excellence.', 'font-size: 16px; color: #F5E6A8;');
-    </script>
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
