@@ -3,123 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amani Place | Premium Office Space Dar es Salaam</title>
+    <title>Amani Place - Premium Business Center</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Basic styles included directly */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="container">
-            <nav class="nav-container">
+            <div class="nav-container">
                 <div class="logo">
-                    <div class="logo-icon">AP</div>
-                    <div class="logo-text">
-                        <h1>Amani <span>Place</span></h1>
-                        <p class="logo-sub">PREMIUM BUSINESS CENTER</p>
-                    </div>
+                    <h2>Amani <span>Place</span></h2>
+                    <p class="logo-sub">Premium Business Center</p>
                 </div>
-
-                <button class="mobile-toggle" id="mobileToggle">
+                
+                <button class="mobile-toggle">
                     <i class="fas fa-bars"></i>
                 </button>
-
-                <div class="nav-menu" id="navMenu">
-                    <ul class="nav-links">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="spaces.html">Spaces</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-
-                    <div class="language-switcher">
-                        <button class="language-btn" id="languageBtn">
-                            <span id="currentLang">EN</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <div class="language-dropdown" id="languageDropdown">
-                            <div class="language-option active" data-lang="en">
-                                <span>English</span>
-                            </div>
-                            <div class="language-option" data-lang="sw">
-                                <span>Kiswahili</span>
-                            </div>
-                        </div>
-                    </div>
+                
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#spaces">Spaces</a>
+                    <a href="#contact">Contact</a>
+                    <button class="lang-btn">EN</button>
                 </div>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">
+                <div class="badge">
                     <i class="fas fa-crown"></i>
-                    <span class="lang-en">DAR ES SALAAM'S PREMIUM BUSINESS ADDRESS</span>
-                    <span class="lang-sw">ANWANI BORA YA BIASHARA YA DAR ES SALAAM</span>
+                    <span>DAR ES SALAAM'S FINEST</span>
                 </div>
                 
-                <h1 class="lang-en">Elevate Your Business Excellence</h1>
-                <h1 class="lang-sw">Inua Ubora wa Biashara Yako</h1>
+                <h1>Premium Office Space in Dar es Salaam</h1>
                 
-                <p class="lang-en">
-                    Experience unparalleled luxury and sophistication in Tanzania's most exclusive business center. 
-                    Premium office spaces, state-of-the-art amenities, and executive services designed for success.
-                </p>
-                <p class="lang-sw">
-                    Pata anasa na ustadi usio na kifani katika kituo cha biashara cha kipekee zaidi cha Tanzania.
-                    Nafasi bora za ofisi, vifaa vya kisasa, na huduma za utawala zilizoundwa kwa mafanikio.
-                </p>
+                <p>Centrally located workspaces with flexible leasing. Professional environment with concierge, meeting rooms, and all amenities for your business success.</p>
                 
-                <div class="hero-actions">
-                    <a href="spaces.html" class="btn btn-primary">
+                <div class="hero-buttons">
+                    <a href="#spaces" class="btn btn-primary">
                         <i class="fas fa-building"></i>
-                        <span class="lang-en">View Spaces</span>
-                        <span class="lang-sw">Angalia Nafasi</span>
+                        Explore Spaces
                     </a>
-                    <a href="contact.html" class="btn btn-secondary">
+                    <a href="#contact" class="btn btn-secondary">
                         <i class="fas fa-calendar-alt"></i>
-                        <span class="lang-en">Book a Tour</span>
-                        <span class="lang-sw">Panga Ziara</span>
+                        Book Tour
                     </a>
                 </div>
                 
-                <div class="hero-features">
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="feature-text">
-                            <h4>4.8/5 Rating</h4>
-                            <p class="lang-en">850+ Client Reviews</p>
-                            <p class="lang-sw">Hakiki 850+ za Wateja</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <h4>4.3/5</h4>
+                            <p>700+ Reviews</p>
                         </div>
                     </div>
-                    
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <div class="feature-text">
-                            <h4>12 Floors</h4>
-                            <p class="lang-en">Premium Office Space</p>
-                            <p class="lang-sw">Nafasi Bora ya Ofisi</p>
+                    <div class="stat">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <h4>9 Floors</h4>
+                            <p>Premium Offices</p>
                         </div>
                     </div>
-                    
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="feature-text">
-                            <h4>200+ Companies</h4>
-                            <p class="lang-en">Trust Our Facilities</p>
-                            <p class="lang-sw">Tumaini Vifaa Vyetu</p>
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h4>200+</h4>
+                            <p>Companies</p>
                         </div>
                     </div>
                 </div>
@@ -127,61 +90,141 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="section">
+    <!-- Features -->
+    <section class="section" id="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-label lang-en">WHY CHOOSE US</span>
-                <span class="section-label lang-sw">KWA NINI KUTUCHAGUA</span>
-                <h2 class="section-title lang-en">Premium Business Solutions</h2>
-                <h2 class="section-title lang-sw">Ufumbuzi Bora wa Biashara</h2>
-                <p class="section-description lang-en">
-                    Designed for executives, entrepreneurs, and businesses seeking excellence in Dar es Salaam's prime location.
-                </p>
-                <p class="section-description lang-sw">
-                    Ilivyoundwa kwa watendaji, wajasiriamali, na biashara zinazotafuta ubora katika eneo kuu la Dar es Salaam.
-                </p>
+                <h2>Why Choose Amani Place</h2>
+                <p>Experience premium office solutions in the heart of Dar es Salaam</p>
             </div>
             
-            <div class="features-grid">
+            <div class="features">
                 <div class="feature-card">
-                    <div class="feature-card-icon">
+                    <div class="feature-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h3 class="lang-en">Prime Location</h3>
-                    <h3 class="lang-sw">Eneo Bora</h3>
-                    <p class="lang-en">Located in the heart of Dar es Salaam's business district on Ohio Street.</p>
-                    <p class="lang-sw">Ipo katikati mwa eneo la biashara la Dar es Salaam katika Ohio Street.</p>
+                    <h3>Prime Location</h3>
+                    <p>Ohio Street, Office Park in Dar es Salaam's central business district</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-card-icon">
+                    <div class="feature-icon">
                         <i class="fas fa-building"></i>
                     </div>
-                    <h3 class="lang-en">A-Grade Building</h3>
-                    <h3 class="lang-sw">Jengo la Daraja A</h3>
-                    <p class="lang-en">Modern 12-floor building with premium finishes and smart technology.</p>
-                    <p class="lang-sw">Jengo la kisasa la sakafu 12 lenye kumaliza bora na teknolojia smart.</p>
+                    <h3>A-Grade Building</h3>
+                    <p>9-12 floor modern office building with premium facilities</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-card-icon">
+                    <div class="feature-icon">
                         <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <h3 class="lang-en">Flexible Terms</h3>
-                    <h3 class="lang-sw">Masharti Rahisi</h3>
-                    <p class="lang-en">No long-term commitments. Lease terms from 1 month to 5 years.</p>
-                    <p class="lang-sw">Hakuna ahadi za muda mrefu. Masharti ya kukodisha kutoka mwezi 1 hadi miaka 5.</p>
+                    <h3>Flexible Leasing</h3>
+                    <p>No long-term commitments, office spaces available on demand</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-card-icon">
+                    <div class="feature-icon">
                         <i class="fas fa-concierge-bell"></i>
                     </div>
-                    <h3 class="lang-en">Full Support</h3>
-                    <h3 class="lang-sw">Usaidizi Kamili</h3>
-                    <p class="lang-en">24/7 concierge, reception, admin support, and business services.</p>
-                    <p class="lang-sw">Msimamizi 24/7, mapokezi, usaidizi wa utawala, na huduma za biashara.</p>
+                    <h3>Full Support</h3>
+                    <p>Reception, concierge, admin support and business services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive office solutions for modern businesses</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Private Offices">
+                    </div>
+                    <div class="service-content">
+                        <h3>Private Offices</h3>
+                        <p>Fully furnished private offices available on demand. Perfect for teams of all sizes.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-expand-arrows-alt"></i> From 250 sq.ft.</span>
+                            <span><i class="fas fa-users"></i> 1-20 People</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Meeting Rooms">
+                    </div>
+                    <div class="service-content">
+                        <h3>Meeting Rooms</h3>
+                        <p>Professional meeting spaces equipped with modern technology.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-expand-arrows-alt"></i> Various Sizes</span>
+                            <span><i class="fas fa-users"></i> 4-50 People</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch to schedule a tour or learn more</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Ohio Street, Office Park<br>Dar es Salaam, Tanzania</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+255 715 023 799</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Mon-Fri: 9:00 AM - 5:00 PM<br>Sat-Sun: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -190,85 +233,29 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <div class="logo-icon">AP</div>
-                        <div class="logo-text">
-                            <h1>Amani <span>Place</span></h1>
-                            <p class="logo-sub">PREMIUM BUSINESS CENTER</p>
-                        </div>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <h2>Amani <span>Place</span></h2>
+                        <p class="logo-sub">Premium Business Center</p>
                     </div>
-                    <p class="lang-en">
-                        Tanzania's premier business center offering premium office spaces, 
-                        executive amenities, and unparalleled service in Dar es Salaam.
-                    </p>
-                    <p class="lang-sw">
-                        Kituo kikuu cha biashara cha Tanzania kinachotoa nafasi bora za ofisi, 
-                        vifaa vya utawala, na huduma isiyo na kifani katika Dar es Salaam.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    </div>
+                    <p>Premium office space solutions in the heart of Dar es Salaam's commercial district.</p>
                 </div>
                 
-                <div class="footer-column">
-                    <h3 class="lang-en">Quick Links</h3>
-                    <h3 class="lang-sw">Viungo vya Haraka</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html" class="lang-en">Home</a><a href="index.html" class="lang-sw">Nyumbani</a></li>
-                        <li><a href="about.html" class="lang-en">About Us</a><a href="about.html" class="lang-sw">Kuhusu Sisi</a></li>
-                        <li><a href="services.html" class="lang-en">Services</a><a href="services.html" class="lang-sw">Huduma</a></li>
-                        <li><a href="spaces.html" class="lang-en">Spaces</a><a href="spaces.html" class="lang-sw">Nafasi</a></li>
-                        <li><a href="gallery.html" class="lang-en">Gallery</a><a href="gallery.html" class="lang-sw">Picha</a></li>
-                        <li><a href="contact.html" class="lang-en">Contact</a><a href="contact.html" class="lang-sw">Wasiliana</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3 class="lang-en">Contact Info</h3>
-                    <h3 class="lang-sw">Taarifa za Mawasiliano</h3>
-                    <div class="footer-contact">
-                        <div class="footer-contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <p>Ohio Street, Office Park</p>
-                                <p>Dar es Salaam, Tanzania</p>
-                            </div>
-                        </div>
-                        <div class="footer-contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <p>+255 715 023 799</p>
-                            </div>
-                        </div>
-                        <div class="footer-contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <p>info@amanipalce.tz</p>
-                            </div>
-                        </div>
-                        <div class="footer-contact-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <p class="lang-en">Mon-Fri: 8:00 AM - 8:00 PM</p>
-                                <p class="lang-sw">Jumatatu-Ijumaa: 8:00 AM - 8:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Ohio Street, Office Park, Dar es Salaam</p>
+                    <p><i class="fas fa-phone-alt"></i> +255 715 023 799</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-5PM</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p class="lang-en">© 2024 Amani Place Premium. All rights reserved.</p>
-                <p class="lang-sw">© 2024 Amani Place Premium. Haki zote zimehifadhiwa.</p>
+                <p>&copy; 2024 Amani Place. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
