@@ -1,117 +1,100 @@
-
-// Main JavaScript for Amani Place
-
+// Amani Place - Main JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation Toggle
+    // Mobile Navigation
     const mobileToggle = document.getElementById('mobileToggle');
     const navMenu = document.getElementById('navMenu');
     
     if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', () => {
+        mobileToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
-            mobileToggle.innerHTML = navMenu.classList.contains('active') 
+            this.innerHTML = navMenu.classList.contains('active') 
                 ? '<i class="fas fa-times"></i>' 
                 : '<i class="fas fa-bars"></i>';
         });
         
         // Close mobile menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
                 mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
             });
         });
     }
     
-    // Header scroll effect
-    const header = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            header.style.background = 'rgba(26, 26, 26, 0.98)';
-            header.style.backdropFilter = 'blur(20px)';
-        } else {
-            header.style.background = 'rgba(26, 26, 26, 0.95)';
-            header.style.backdropFilter = 'blur(10px)';
-        }
-    });
+    // Language Switcher
+    const languageBtn = document.getElementById('languageBtn');
+    const languageDropdown = document.getElementById('languageDropdown');
     
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            
-            // Only handle internal page anchor links
-            if (href.includes('#') && !href.includes('.html')) {
-                e.preventDefault();
-                const targetId = href.substring(1);
-                const targetElement = document.getElementById(targetId);
-                
-                if (targetElement) {
-                    const headerHeight = header.offsetHeight;
-                    const targetPosition = targetElement.offsetTop - headerHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
+    if (languageBtn && languageDropdown) {
+        languageBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            languageDropdown.classList.toggle('active');
         });
-    });
-    
-    // Form handling for contact page
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            
-            // Show success message
-            const currentLang = document.getElementById('currentLang').textContent.toLowerCase();
-            const message = currentLang === 'en' 
-                ? `Thank you ${name}! Your inquiry has been received. We will contact you shortly.`
-                : `Asante ${name}! Ombi lako limepokelewa. Tutawasiliana nawe hivi karibuni.`;
-            
-            alert(message);
-            
-            // Reset form
-            this.reset();
+        
+        // Close when clicking outside
+        document.addEventListener('click', function() {
+            languageDropdown.classList.remove('active');
+        });
+        
+        languageDropdown.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+        
+        // Language selection
+        document.querySelectorAll('.language-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const lang = this.getAttribute('data-lang');
+                
+                // Update active class
+                document.querySelectorAll('.language-option').forEach(opt => {
+                    opt.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Update button text
+                document.getElementById('currentLang').textContent = lang.toUpperCase();
+                
+                // Switch language content
+                switchLanguage(lang);
+                
+                // Close dropdown
+                languageDropdown.classList.remove('active');
+                
+                // Save preference
+                localStorage.setItem('amanipalce-language', lang);
+            });
+        });
+        
+        // Load saved language
+        const savedLang = localStorage.getItem('amanipalce-language') || 'en';
+        document.querySelectorAll('.language-option').forEach(option => {
+            if (option.getAttribute('data-lang') === savedLang) {
+                option.classList.add('active');
+                document.getElementById('currentLang').textContent = savedLang.toUpperCase();
+                switchLanguage(savedLang);
+            }
         });
     }
     
-    // Gallery lightbox
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    if (galleryItems.length > 0) {
-        galleryItems.forEach(item => {
-            item.addEventListener('click', function() {
-                const imgSrc = this.querySelector('img').src;
-                const caption = this.querySelector('.gallery-caption')?.textContent || '';
-                
-                // Create lightbox
-                const lightbox = document.createElement('div');
-                lightbox.className = 'lightbox';
-                lightbox.innerHTML = `
-                    <div class="lightbox-content">
-                        <button class="lightbox-close">&times;</button>
-                        <img src="${imgSrc}" alt="${caption}">
-                        <div class="lightbox-caption">${caption}</div>
-                    </div>
-                `;
-                
-                document.body.appendChild(lightbox);
-                document.body.style.overflow = 'hidden';
-                
-                // Close lightbox
-                lightbox.addEventListener('click', function(e) {
-                    if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
-                        lightbox.remove();
-                        document.body.style.overflow = 'auto';
-                    }
-                });
-            });
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            header.style.background = 'rgba(26, 26, 26, 0.98)';
+        } else {
+            header.style.background = 'rgba(26, 26, 26, 0.95)';
+        }
+    });
+    
+    // Language switching function
+    function switchLanguage(lang) {
+        // Update all language-specific elements
+        document.querySelectorAll('.lang-en').forEach(el => {
+            el.style.display = lang === 'en' ? 'block' : 'none';
+        });
+        
+        document.querySelectorAll('.lang-sw').forEach(el => {
+            el.style.display = lang === 'sw' ? 'block' : 'none';
         });
     }
 });
