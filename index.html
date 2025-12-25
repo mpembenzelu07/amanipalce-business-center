@@ -6,560 +6,38 @@
     <title>Amani Place | Premium Office Space in Dar es Salaam</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #1a365d;
-            --secondary: #c9a96e;
-            --accent: #2d6b22;
-            --light: #f8f9fa;
-            --dark: #333333;
-            --gray: #6c757d;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0;
-            color: var(--primary);
-        }
-
-        .logo span {
-            color: var(--secondary);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin-left: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: var(--transition);
-            padding: 5px 0;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: var(--secondary);
-        }
-
-        .nav-links a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--secondary);
-            left: 0;
-            bottom: 0;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover:after {
-            width: 100%;
-        }
-
-        .cta-button {
-            background-color: var(--secondary);
-            color: white;
-            padding: 10px 25px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            display: inline-block;
-            border: 2px solid var(--secondary);
-        }
-
-        .cta-button:hover {
-            background-color: transparent;
-            color: var(--secondary);
-        }
-
-        .mobile-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 180px 20px 120px;
-            margin-top: 70px;
-        }
-
-        .hero h2 {
-            font-size: 3.2rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto 2.5rem;
-            opacity: 0.9;
-        }
-
-        .rating {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 2rem;
-        }
-
-        .stars {
-            color: #ffc107;
-            margin-right: 10px;
-        }
-
-        .rating span {
-            font-weight: 600;
-        }
-
-        /* Sections */
-        section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-
-        .section-title h2:after {
-            content: '';
-            position: absolute;
-            width: 70px;
-            height: 3px;
-            background: var(--secondary);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        /* Features */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .feature-card {
-            background: white;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-            text-align: center;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            color: var(--primary);
-        }
-
-        /* About */
-        .about-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .about-image {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Services */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-img {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .service-card:hover .service-img img {
-            transform: scale(1.05);
-        }
-
-        .service-content {
-            padding: 25px;
-        }
-
-        .service-content h3 {
-            color: var(--primary);
-            font-size: 1.4rem;
-        }
-
-        /* Clients */
-        .client-types {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .client-type {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            width: 220px;
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .client-type:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .client-icon {
-            font-size: 2rem;
-            color: var(--secondary);
-            margin-bottom: 15px;
-        }
-
-        /* Contact */
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
-        }
-
-        .contact-info {
-            background: var(--primary);
-            color: white;
-            padding: 40px;
-            border-radius: 8px;
-        }
-
-        .contact-info h3 {
-            color: white;
-            margin-bottom: 2rem;
-            font-size: 1.8rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
-        }
-
-        .contact-icon {
-            font-size: 1.3rem;
-            color: var(--secondary);
-            margin-right: 15px;
-            margin-top: 5px;
-        }
-
-        .contact-form {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--secondary);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 60px 0 30px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-logo h3 {
-            color: white;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-logo span {
-            color: var(--secondary);
-        }
-
-        .footer-links h4, .footer-contact h4 {
-            color: white;
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #ddd;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--secondary);
-            padding-left: 5px;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #aaa;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero h2 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .mobile-toggle {
-                display: block;
-            }
-            
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                background: white;
-                width: 100%;
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-                transform: translateY(-100%);
-                opacity: 0;
-                transition: var(--transition);
-                z-index: 999;
-            }
-            
-            .nav-links.active {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            
-            .nav-links li {
-                margin: 15px 0;
-            }
-            
-            .hero {
-                padding: 150px 20px 100px;
-            }
-            
-            .hero h2 {
-                font-size: 2.2rem;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            section {
-                padding: 60px 0;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero h2 {
-                font-size: 1.8rem;
-            }
-            
-            .cta-button {
-                padding: 8px 20px;
-            }
-            
-            .feature-card, .service-card, .contact-info, .contact-form {
-                padding: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Header & Navigation -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <h1>Amani <span>Place</span></h1>
+    <header class="header">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Amani <span>Place</span></h1>
+                    <span class="logo-sub">Premium Business Center</span>
+                </div>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="spaces.html">Spaces</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="cta-button">Book a Tour</a></li>
+                </ul>
             </div>
-            <div class="mobile-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#clients">Clients</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact" class="cta-button">Book a Tour</a></li>
-            </ul>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- Page Header -->
+    <section class="page-header">
         <div class="container">
-            <h2>Premium Office Space in Dar es Salaam</h2>
+            <h1>Premium Office Space in Dar es Salaam</h1>
             <p>Centrally located workspaces with flexible leasing. Professional environment with concierge, meeting rooms, and all amenities for your business success.</p>
-            <a href="#contact" class="cta-button">Schedule a Visit</a>
+            <a href="contact.html" class="cta-button">Schedule a Visit</a>
             
             <div class="rating">
                 <div class="stars">
@@ -574,8 +52,8 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features">
+    <!-- Main Content -->
+    <main class="main-content">
         <div class="container">
             <div class="section-title">
                 <h2>Why Choose Amani Place</h2>
@@ -615,216 +93,15 @@
                     <p>Reception, concierge, admin support, and business services included</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Amani Place</h2>
-            </div>
             
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Amani Place is a professional business centre in the heart of Dar es Salaam's commercial district — ideal for companies, startups, consultancies, and offices.</p>
-                    <p>It's an "A-grade" office building offering modern workspace solutions without needing to sign long leases. With 9-12 floors of premium office space, we provide the perfect environment for businesses to thrive.</p>
-                    <p>Our facilities include air-conditioned workspaces, high-speed elevators, meeting rooms, business lounge areas, and professional reception services.</p>
-                    <p>Open Monday to Friday, 9 AM to 5 PM, we're here to support your business needs with premium amenities and a prestigious address.</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Amani Place Building">
-                </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="about.html" class="cta-button">Learn More About Us</a>
             </div>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Services</h2>
-                <p>Comprehensive office solutions for modern businesses</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Private Offices">
-                    </div>
-                    <div class="service-content">
-                        <h3>Private Offices</h3>
-                        <p>Fully furnished private offices available on demand. Perfect for teams of all sizes with flexible lease terms and no long-term commitments.</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Meeting Rooms">
-                    </div>
-                    <div class="service-content">
-                        <h3>Meeting & Conference Rooms</h3>
-                        <p>Professional meeting spaces equipped with modern technology for presentations, client meetings, and team collaborations.</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Business Lounge">
-                    </div>
-                    <div class="service-content">
-                        <h3>Business Lounge & Networking</h3>
-                        <p>Comfortable lounge areas for informal meetings, networking, or focused work outside your private office.</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Admin Support">
-                    </div>
-                    <div class="service-content">
-                        <h3>Reception & Admin Support</h3>
-                        <p>Professional reception services, mail handling, administrative support, and concierge services for your business needs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Clients Section -->
-    <section id="clients">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Clients</h2>
-                <p>Trusted by diverse businesses and professionals</p>
-            </div>
-            
-            <div class="client-types">
-                <div class="client-type">
-                    <div class="client-icon">
-                        <i class="fas fa-landmark"></i>
-                    </div>
-                    <h3>Local Companies</h3>
-                    <p>Established Tanzanian businesses looking for premium office space</p>
-                </div>
-                
-                <div class="client-type">
-                    <div class="client-icon">
-                        <i class="fas fa-globe-africa"></i>
-                    </div>
-                    <h3>International Firms</h3>
-                    <p>Global companies like Regus with offices on the 7th floor</p>
-                </div>
-                
-                <div class="client-type">
-                    <div class="client-icon">
-                        <i class="fas fa-gavel"></i>
-                    </div>
-                    <h3>Law Firms</h3>
-                    <p>Legal practices including FB Attorneys and other consultancies</p>
-                </div>
-                
-                <div class="client-type">
-                    <div class="client-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Startups & Consultants</h3>
-                    <p>Innovative startups and independent consultants</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Get in touch to schedule a tour or learn more about our office spaces</p>
-            </div>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Ohio Street, Office Park<br>Dar es Salaam, Tanzania</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+255 715 023 799</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div>
-                            <h4>Business Hours</h4>
-                            <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday - Sunday: Closed</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div>
-                            <h4>WhatsApp Booking</h4>
-                            <p>Available during business hours for quick inquiries and bookings</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h3>Send a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" class="form-control">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" class="form-control" rows="5" placeholder="Tell us about your office space requirements..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
@@ -835,20 +112,20 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#clients">Our Clients</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="spaces.html">Spaces</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-contact">
                     <h4>Contact Info</h4>
-                    <p><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Ohio Street, Office Park, Dar es Salaam</p>
-                    <p><i class="fas fa-phone" style="margin-right: 10px;"></i> +255 715 023 799</p>
-                    <p><i class="fas fa-clock" style="margin-right: 10px;"></i> Mon-Fri: 9AM-5PM</p>
-                    <p><i class="fas fa-star" style="margin-right: 10px;"></i> 4.3 (700+ reviews)</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Ohio Street, Office Park, Dar es Salaam</p>
+                    <p><i class="fas fa-phone"></i> +255 715 023 799</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-5PM</p>
+                    <p><i class="fas fa-star"></i> 4.3 (700+ reviews)</p>
                 </div>
             </div>
             
@@ -858,61 +135,6 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile Navigation Toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navLinks = document.getElementById('navLinks');
-        
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileToggle.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-        
-        // Form Submission
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            
-            // In a real implementation, you would send this data to a server
-            // For this demo, we'll just show an alert
-            alert(`Thank you ${name}! Your inquiry has been received. We will contact you at ${email} or ${phone} shortly.`);
-            
-            // Reset form
-            contactForm.reset();
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if(this.getAttribute('href') === '#') return;
-                
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
