@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Spaces | Amani Place Business Centre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Page-specific styles for Office Spaces */
+        .page-header {
+            background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.95)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .spaces-intro {
+            padding: 80px 0;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .spaces-intro h2 {
+            font-size: 2.2rem;
+            color: #1a365d;
+            margin-bottom: 20px;
+        }
+        
+        .space-types {
+            padding: 60px 0;
+            background-color: #f5f7fa;
+        }
+        
+        .space-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .space-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .space-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .space-image {
+            height: 200px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a365d;
+            font-size: 3rem;
+        }
+        
+        .space-content {
+            padding: 30px;
+        }
+        
+        .space-badge {
+            background-color: #e6af2e;
+            color: #1a365d;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .space-content h3 {
+            font-size: 1.5rem;
+            color: #1a365d;
+            margin-bottom: 15px;
+        }
+        
+        .space-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .space-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .space-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .space-features i {
+            color: #e6af2e;
+            margin-right: 10px;
+            width: 20px;
+        }
+        
+        .building-features {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .feature-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            background-color: #1a365d;
+            color: white;
+        }
+        
+        .feature-item:hover h4,
+        .feature-item:hover .feature-icon {
+            color: white;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #e6af2e;
+            margin-bottom: 20px;
+        }
+        
+        .feature-item h4 {
+            color: #1a365d;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .availability-cta {
+            padding: 80px 0;
+            background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .availability-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .availability-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #e6af2e;
+            color: #1a365d;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+        
+        .btn:hover {
+            background-color: #d39e20;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .text-center { text-align: center; }
+        .mb-4 { margin-bottom: 40px; }
+        
+        /* Language-specific */
+        .swahili { display: none; }
+        
+        @media (max-width: 768px) {
+            .page-header { padding: 70px 0; }
+            .spaces-intro h2 { font-size: 1.8rem; }
+            .space-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +255 715 023 799</span>
+                    <span><i class="fas fa-clock"></i> Mon–Fri 9 AM–5 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Ohio Street, Office Park, Dar es Salaam</span>
+                </div>
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">English</button>
+                    <button class="lang-btn" data-lang="sw">Swahili</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container header-container">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <h1>Amani Place</h1>
+                        <p>Premium Business Centre | Dar es Salaam</p>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="spaces.html" class="active">Office Spaces</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="overlay" id="overlay"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="english">Office Spaces</h1>
+            <h1 class="swahili">Nafasi za Ofisi</h1>
+            <p class="english">Flexible, premium office solutions in Dar es Salaam's commercial district</p>
+            <p class="swahili">Suluhisho zinazobadilika, za hali ya juu za ofisi katika eneo la biashara la Dar es Salaam</p>
+        </div>
+    </section>
+
+    <!-- Spaces Intro -->
+    <section class="spaces-intro">
+        <div class="container">
+            <h2 class="english">Premium Office Spaces for Every Business Need</h2>
+            <h2 class="swahili">Nafasi za Hali ya Juu za Ofisi kwa Kila Hitaji la Biashara</h2>
+            
+            <p class="english">Amani Place offers a variety of office solutions designed to meet the needs of different businesses. From private offices for established companies to flexible workspaces for startups and virtual office solutions, we provide premium spaces without the need for long-term leases.</p>
+            <p class="swahili">Amani Place inatoa aina mbalimbali za suluhisho za ofisi zilizoundwa kukidhi mahitaji ya biashara tofauti. Kutoka ofisi binafsi kwa kampuni zilizokua hadi nafasi za kufanya kazi zinazobadilika kwa vyanzo vya biashara na suluhisho za ofisi mtandaoni, tunatoa nafasi za hali ya juu bila hitaji la mikataba ya muda mrefu.</p>
+            
+            <p class="english">Our 9-12 floor A-grade building in the heart of Dar es Salaam's commercial district provides the perfect professional environment for your business.</p>
+            <p class="swahili">Jengo letu la ghorofa 9-12 la daraja A katikati mwa eneo la biashara la Dar es Salaam linatoa mazingira bora ya kitaalam kwa biashara yako.</p>
+        </div>
+    </section>
+
+    <!-- Space Types -->
+    <section class="space-types">
+        <div class="container">
+            <h2 class="english text-center mb-4">Available Office Solutions</h2>
+            <h2 class="swahili text-center mb-4">Suluhisho za Ofisi Zilizopo</h2>
+            
+            <div class="space-grid">
+                <!-- Private Office -->
+                <div class="space-card">
+                    <div class="space-image">
+                        <i class="fas fa-door-closed"></i>
+                    </div>
+                    <div class="space-content">
+                        <div class="space-badge english">Most Popular</div>
+                        <div class="space-badge swahili">Inayopendwa Zaidi</div>
+                        
+                        <h3 class="english">Private Offices</h3>
+                        <h3 class="swahili">Ofisi Binafsi</h3>
+                        
+                        <p class="english">Fully furnished private offices for established businesses requiring dedicated space and privacy.</p>
+                        <p class="swahili">Ofisi binafsi zilizokamilishwa kabisa kwa biashara zilizokua zinazohitaji nafasi maalum na faragha.</p>
+                        
+                        <ul class="space-features">
+                            <li class="english"><i class="fas fa-check"></i> 80-500 sq. ft. spaces</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Nafasi za futi za mraba 80-500</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Fully furnished & equipped</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Imekamilishwa kabisa na vifaa</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Lockable doors</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Milango inayofungika</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Flexible lease terms</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Masharti ya ukodishaji yanayobadilika</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Coworking Space -->
+                <div class="space-card">
+                    <div class="space-image">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="space-content">
+                        <div class="space-badge english">Flexible Option</div>
+                        <div class="space-badge swahili">Chaguo Linayobadilika</div>
+                        
+                        <h3 class="english">Coworking Spaces</h3>
+                        <h3 class="swahili">Nafasi za Kushirikiana Kazi</h3>
+                        
+                        <p class="english">Shared workspace areas ideal for freelancers, startups, and remote workers seeking flexible arrangements.</p>
+                        <p class="swahili">Maeneo ya kushiriki workspace bora kwa wanaofanya kazi huru, vyanzo vya biashara, na wafanyakazi wa mbali wanaotafuta mpangilio unaobadilika.</p>
+                        
+                        <ul class="space-features">
+                            <li class="english"><i class="fas fa-check"></i> Hot desks & dedicated desks</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Meza za moto na meza maalum</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> High-speed internet</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Intaneti ya kasi</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Business lounge access</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Ufikiaji wa ukumbi wa biashara</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Daily, weekly, monthly plans</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Mipango ya kila siku, kila wiki, kila mwezi</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Team Suite -->
+                <div class="space-card">
+                    <div class="space-image">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="space-content">
+                        <div class="space-badge english">For Teams</div>
+                        <div class="space-badge swahili">Kwa Timu</div>
+                        
+                        <h3 class="english">Team Suites</h3>
+                        <h3 class="swahili">Suti za Timu</h3>
+                        
+                        <p class="english">Larger office suites for teams of 5-20 people, featuring private areas with shared amenities.</p>
+                        <p class="swahili">Suti kubwa za ofisi kwa timu za watu 5-20, zikiwa na maeneo binafsi na vifaa vya kushiriki.</p>
+                        
+                        <ul class="space-features">
+                            <li class="english"><i class="fas fa-check"></i> 500-2000 sq. ft. spaces</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Nafasi za futi za mraba 500-2000</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Multiple private offices</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Ofisi nyingi binafsi</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Shared meeting area</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Eneo la kushiriki la mkutano</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Customizable layout</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Mpangilio unaoweza kubadilishwa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Building Features -->
+    <section class="building-features">
+        <div class="container">
+            <h2 class="english text-center mb-4">A-Grade Building Features</h2>
+            <h2 class="swahili text-center mb-4">Vipengele vya Jengo la Daraja A</h2>
+            
+            <p class="english text-center mb-4" style="max-width: 800px; margin: 0 auto;">Our multi-floor office building includes premium amenities designed for professional business operations:</p>
+            <p class="swahili text-center mb-4" style="max-width: 800px; margin: 0 auto;">Jengo letu la ofisi la ghorofa nyingi linajumuisha vifaa vya hali ya juu vilivyoundwa kwa shughuli za kitaalam za biashara:</p>
+            
+            <div class="feature-highlights">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h4 class="english">Air-conditioning</h4>
+                    <h4 class="swahili">Ubaridi</h4>
+                    <p class="english">Full building climate control</p>
+                    <p class="swahili">Udhibiti kamili wa hali ya hewa ya jengo</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-elevator"></i>
+                    </div>
+                    <h4 class="english">High-speed Lifts</h4>
+                    <h4 class="swahili">Lifti za Kasi</h4>
+                    <p class="english">Efficient floor-to-floor access</p>
+                    <p class="swahili">Ufikiaji wa ufanisi wa sakafu hadi sakafu</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="english">24/7 Security</h4>
+                    <h4 class="swahili">Usalama wa Saa 24/7</h4>
+                    <p class="english">Secure, monitored premises</p>
+                    <p class="swahili">Majengo salama, yanayofuatiliwa</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h4 class="english">High-speed Internet</h4>
+                    <h4 class="swahili">Intaneti ya Kasi</h4>
+                    <p class="english">Reliable business connectivity</p>
+                    <p class="swahili">Muunganisho wa kuaminika wa biashara</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h4 class="english">Parking Facilities</h4>
+                    <h4 class="swahili">Vifaa vya Maegesho</h4>
+                    <p class="english">Designated parking areas</p>
+                    <p class="swahili">Maeneo maalum ya maegesho</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h4 class="english">Reception Services</h4>
+                    <h4 class="swahili">Huduma za Mapokezi</h4>
+                    <p class="english">Professional client greeting</p>
+                    <p class="swahili">Salamu ya kitaalam ya mteja</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Availability CTA -->
+    <section class="availability-cta">
+        <div class="container">
+            <div class="availability-content">
+                <h2 class="english">Check Availability & Book a Tour</h2>
+                <h2 class="swahili">Angalia Upitishaji na Panga Ziara</h2>
+                
+                <p class="english">Join international firms like Regus (on the 7th floor) and local businesses including FB Attorneys who have chosen Amani Place for their premium office needs.</p>
+                <p class="swahili">Jiunge na kampuni za kimataifa kama Regus (kwenye ghorofa ya 7) na biashara za ndani ikiwemo FB Attorneys ambazo zimechagua Amani Place kwa mahitaji yao ya hali ya juu ya ofisi.</p>
+                
+                <p class="english">Our centrally located business centre is rated 4.3 stars by 700+ reviewers for being conveniently located in the central business area, providing a secure, well-maintained office environment ideal for professional image.</p>
+                <p class="swahili">Kituo chetu cha biashara kilichoko katikati kimekadiriwa nyota 4.3 na wakaguzi 700+ kwa kuwa kiko kwenye eneo rahisi la kati la biashara, kinatoa mazingira salama, yanayodumishwa vizuri ya ofisi bora kwa sura ya kitaalam.</p>
+                
+                <div class="rating" style="justify-content: center; margin: 30px 0;">
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-value" style="color: white;">4.3</span>
+                    <span class="rating-count" style="color: rgba(255,255,255,0.8);">(700+ reviews)</span>
+                </div>
+                
+                <a href="contact.html" class="btn english">Book a Tour Today</a>
+                <a href="contact.html" class="btn btn-secondary english">Check Availability</a>
+                
+                <a href="contact.html" class="btn swahili">Panga Ziara Leo</a>
+                <a href="contact.html" class="btn btn-secondary swahili">Angalia Upitishaji</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Amani Place</h3>
+                    <p class="english">Premium business centre offering flexible office solutions in Dar es Salaam's commercial district.</p>
+                    <p class="swahili">Kituo cha hali ya juu cha biashara kinachotoa suluhisho zinazobadilika za ofisi katika eneo la biashara la Dar es Salaam.</p>
+                    <div class="rating">
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>4.3 (700+ reviews)</span>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="english">Quick Links</h3>
+                    <h3 class="swahili">Viungo Vya Haraka</h3>
+                    <ul>
+                        <li><a href="index.html" class="english">Home</a><a href="index.html" class="swahili">Nyumbani</a></li>
+                        <li><a href="about.html" class="english">About Us</a><a href="about.html" class="swahili">Kuhusu Sisi</a></li>
+                        <li><a href="services.html" class="english">Services</a><a href="services.html" class="swahili">Huduma</a></li>
+                        <li><a href="spaces.html" class="english">Office Spaces</a><a href="spaces.html" class="swahili">Nafasi za Ofisi</a></li>
+                        <li><a href="contact.html" class="english">Contact</a><a href="contact.html" class="swahili">Wasiliana</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="english">Contact Info</h3>
+                    <h3 class="swahili">Mawasiliano</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Ohio Street, Office Park, Dar es Salaam, Tanzania</li>
+                        <li><i class="fas fa-phone"></i> +255 715 023 799</li>
+                        <li><i class="fas fa-envelope"></i> info@amaniplace.co.tz</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 5PM</li>
+                        <li><i class="fas fa-clock"></i> Sat-Sun: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="english">&copy; 2023 Amani Place. All rights reserved. | Premium Business Centre in Dar es Salaam</p>
+                <p class="swahili">&copy; 2023 Amani Place. Haki zote zimehifadhiwa. | Kituo cha Hali ya Juu cha Biashara Dar es Salaam</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const langButtons = document.querySelectorAll('.lang-btn');
+            const englishElements = document.querySelectorAll('.english');
+            const swahiliElements = document.querySelectorAll('.swahili');
+            
+            // Set initial language (English)
+            swahiliElements.forEach(el => el.style.display = 'none');
+            
+            // Add click event to language buttons
+            langButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    
+                    // Update active button
+                    langButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show/hide language elements
+                    if (lang === 'en') {
+                        englishElements.forEach(el => el.style.display = 'block');
+                        swahiliElements.forEach(el => el.style.display = 'none');
+                    } else if (lang === 'sw') {
+                        englishElements.forEach(el => el.style.display = 'none');
+                        swahiliElements.forEach(el => el.style.display = 'block');
+                    }
+                });
+            });
+            
+            // Mobile menu functionality
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+            const overlay = document.getElementById('overlay');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+            
+            overlay.addEventListener('click', function() {
+                mainNav.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+            
+            // Close mobile menu when clicking a link
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mainNav.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
