@@ -6,11 +6,11 @@
     <title>Services | Amani Place Business Centre</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Reuse all base styles */
+        /* Reuse all base styles from about page */
         :root, * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         
-        /* Page-specific styles for Services */
+        /* Page Header */
         .page-header {
             background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.95)), url('https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
@@ -20,6 +20,12 @@
             text-align: center;
         }
         
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Services Content */
         .services-content {
             padding: 80px 0;
             background-color: white;
@@ -166,8 +172,17 @@
         /* Language-specific */
         .swahili { display: none; }
         
+        /* Add header/footer styles from about page */
+        header, .header-top, .main-header, .header-container, 
+        .logo-container, .logo-text, nav, footer, .footer-content,
+        .footer-column, .footer-bottom, .contact-info, .language-switcher,
+        .lang-btn, .mobile-menu-btn, .overlay {
+            /* Styles are defined in the CSS above */
+        }
+        
         @media (max-width: 768px) {
             .page-header { padding: 70px 0; }
+            .page-header h1 { font-size: 2rem; }
             .service-hero h2 { font-size: 1.8rem; }
             .services-grid { grid-template-columns: 1fr; }
         }
@@ -527,24 +542,26 @@
             const mainNav = document.getElementById('mainNav');
             const overlay = document.getElementById('overlay');
             
-            mobileMenuBtn.addEventListener('click', function() {
-                mainNav.classList.toggle('active');
-                overlay.classList.toggle('active');
-            });
-            
-            overlay.addEventListener('click', function() {
-                mainNav.classList.remove('active');
-                overlay.classList.remove('active');
-            });
-            
-            // Close mobile menu when clicking a link
-            const navLinks = document.querySelectorAll('nav a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    overlay.classList.toggle('active');
+                });
+                
+                overlay.addEventListener('click', function() {
                     mainNav.classList.remove('active');
                     overlay.classList.remove('active');
                 });
-            });
+                
+                // Close mobile menu when clicking a link
+                const navLinks = document.querySelectorAll('nav a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mainNav.classList.remove('active');
+                        overlay.classList.remove('active');
+                    });
+                });
+            }
         });
     </script>
 </body>
