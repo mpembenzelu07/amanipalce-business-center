@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Amani Place Business Centre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reuse all base styles */
+        :root, * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        /* Page-specific styles for Services */
+        .page-header {
+            background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.95)), url('https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .services-content {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .service-hero {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        
+        .service-hero h2 {
+            font-size: 2.2rem;
+            color: #1a365d;
+            margin-bottom: 20px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .service-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-header {
+            background-color: #1a365d;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .service-header i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #e6af2e;
+        }
+        
+        .service-header h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        
+        .service-body {
+            padding: 30px;
+        }
+        
+        .service-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .service-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .service-features i {
+            color: #e6af2e;
+            margin-right: 10px;
+        }
+        
+        .price-tag {
+            background-color: #e6af2e;
+            color: #1a365d;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        .services-cta {
+            background-color: #f5f7fa;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 2rem;
+            color: #1a365d;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #e6af2e;
+            color: #1a365d;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+        
+        .btn:hover {
+            background-color: #d39e20;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #1a365d;
+            border: 2px solid #1a365d;
+            margin-left: 15px;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #1a365d;
+            color: white;
+        }
+        
+        .text-center { text-align: center; }
+        .mb-4 { margin-bottom: 40px; }
+        
+        /* Language-specific */
+        .swahili { display: none; }
+        
+        @media (max-width: 768px) {
+            .page-header { padding: 70px 0; }
+            .service-hero h2 { font-size: 1.8rem; }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +255 715 023 799</span>
+                    <span><i class="fas fa-clock"></i> Mon–Fri 9 AM–5 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Ohio Street, Office Park, Dar es Salaam</span>
+                </div>
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">English</button>
+                    <button class="lang-btn" data-lang="sw">Swahili</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container header-container">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <h1>Amani Place</h1>
+                        <p>Premium Business Centre | Dar es Salaam</p>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html" class="active">Services</a></li>
+                        <li><a href="spaces.html">Office Spaces</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="overlay" id="overlay"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="english">Our Services</h1>
+            <h1 class="swahili">Huduma Zetu</h1>
+            <p class="english">Comprehensive workspace solutions for modern businesses</p>
+            <p class="swahili">Suluhisho kamili za workspace kwa biashara za kisasa</p>
+        </div>
+    </section>
+
+    <!-- Services Content -->
+    <section class="services-content">
+        <div class="container">
+            <div class="service-hero">
+                <h2 class="english">Premium Business Centre Services</h2>
+                <h2 class="swahili">Huduma za Kituo cha Hali ya Juu cha Biashara</h2>
+                <p class="english">Amani Place offers a range of professional services designed to support businesses of all sizes. From private offices to meeting rooms and administrative support, we provide everything you need to operate efficiently.</p>
+                <p class="swahili">Amani Place inatoa anuwai ya huduma za kitaalam zilizoundwa kusaidia biashara za ukubwa wowote. Kutoka ofisi binafsi hadi vyumba vya mkutano na usaidizi wa usimamizi, tunatoa kila kitu unachohitaji kufanya kazi kwa ufanisi.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Private Offices -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <i class="fas fa-door-closed"></i>
+                        <h3 class="english">Private Offices</h3>
+                        <h3 class="swahili">Ofisi Binafsi</h3>
+                    </div>
+                    <div class="service-body">
+                        <p class="english">Fully furnished private offices available on flexible terms without long-term lease commitments.</p>
+                        <p class="swahili">Ofisi binafsi zilizokamilishwa kabisa zilizopatikana kwa masharti yanayobadilika bila ahadi za mikataba ya muda mrefu.</p>
+                        
+                        <ul class="service-features">
+                            <li class="english"><i class="fas fa-check"></i> Air-conditioned private spaces</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Nafasi binafsi zenye ubaridi</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Flexible leasing options</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Chaguzi zinazobadilika za ukodishaji</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> High-speed internet access</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Ufikiaji wa intaneti ya kasi</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Daily, monthly, or yearly terms</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Masharti ya kila siku, kila mwezi, au kila mwaka</li>
+                        </ul>
+                        
+                        <div class="price-tag english">Flexible Pricing Available</div>
+                        <div class="price-tag swahili">Bei Inayobadilika Inapatikana</div>
+                    </div>
+                </div>
+                
+                <!-- Meeting Rooms -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <i class="fas fa-comments"></i>
+                        <h3 class="english">Meeting & Conference Rooms</h3>
+                        <h3 class="swahili">Vyumba vya Mkutano na Mkutano</h3>
+                    </div>
+                    <div class="service-body">
+                        <p class="english">Professionally equipped meeting rooms for client presentations, team meetings, and conferences.</p>
+                        <p class="swahili">Vyumba vya mkutano vilivyo na vifaa vya kitaalam kwa uwasilishaji wa mteja, mikutano ya timu, na mikutano.</p>
+                        
+                        <ul class="service-features">
+                            <li class="english"><i class="fas fa-check"></i> Various room sizes available</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Ukubwa mbalimbali wa chumba unapatikana</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Audio-visual equipment provided</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Vifaa vya sauti na video vinatolewa</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Video conferencing capabilities</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Uwezo wa mikutano ya video</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Hourly or daily booking options</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Chaguzi za kuhifadhi kwa saa au siku</li>
+                        </ul>
+                        
+                        <div class="price-tag english">Book by the Hour or Day</div>
+                        <div class="price-tag swahili">Hifadhi kwa Saa au Siku</div>
+                    </div>
+                </div>
+                
+                <!-- Reception Services -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <i class="fas fa-headset"></i>
+                        <h3 class="english">Reception & Admin Support</h3>
+                        <h3 class="swahili">Mapokezi na Usaidizi wa Usimamizi</h3>
+                    </div>
+                    <div class="service-body">
+                        <p class="english">Professional reception services and administrative support to enhance your business operations.</p>
+                        <p class="swahili">Huduma za kitaalam za mapokezi na usaidizi wa usimamizi ili kuboresha shughuli zako za biashara.</p>
+                        
+                        <ul class="service-features">
+                            <li class="english"><i class="fas fa-check"></i> Professional client greeting</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Salamu ya kitaalam ya mteja</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Call answering and forwarding</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Kujibu simu na kupeleka</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Mail and package handling</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Usindikaji wa barua na vifurushi</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Basic administrative tasks</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Kazi za msingi za usimamizi</li>
+                        </ul>
+                        
+                        <div class="price-tag english">Included with Office Rental</div>
+                        <div class="price-tag swahili">Imejumuishwa na Ukodishaji wa Ofisi</div>
+                    </div>
+                </div>
+                
+                <!-- Business Lounge -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <i class="fas fa-couch"></i>
+                        <h3 class="english">Business Lounge & Networking</h3>
+                        <h3 class="swahili">Ukumbi wa Biashara na Mtandao</h3>
+                    </div>
+                    <div class="service-body">
+                        <p class="english">Dedicated lounge areas for informal meetings, networking, and collaborative work.</p>
+                        <p class="swahili">Maeneo maalum ya ukumbi kwa mikutano isiyo rasmi, mtandao, na kazi ya ushirikiano.</p>
+                        
+                        <ul class="service-features">
+                            <li class="english"><i class="fas fa-check"></i> Comfortable seating areas</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Maeneo ya kukaa yenye starehe</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> High-speed Wi-Fi access</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Ufikiaji wa Wi-Fi ya kasi</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Complimentary refreshments</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Vinywaji vya bure</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Networking events</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Matukio ya mtandao</li>
+                        </ul>
+                        
+                        <div class="price-tag english">Free for Tenants</div>
+                        <div class="price-tag swahili">Bure kwa Wakodishi</div>
+                    </div>
+                </div>
+                
+                <!-- Virtual Office -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <i class="fas fa-laptop-house"></i>
+                        <h3 class="english">Virtual Office Solutions</h3>
+                        <h3 class="swahili">Suluhisho za Ofisi Mtandaoni</h3>
+                    </div>
+                    <div class="service-body">
+                        <p class="english">Establish a professional business address and phone number without physical office space.</p>
+                        <p class="swahili">Anzisha anwani ya kitaalam ya biashara na nambari ya simu bila nafasi ya kimwili ya ofisi.</p>
+                        
+                        <ul class="service-features">
+                            <li class="english"><i class="fas fa-check"></i> Prestigious business address</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Anwani ya heshima ya biashara</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Mail handling and forwarding</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Usindikaji na upelekaji wa barua</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Phone answering service</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Huduma ya kujibu simu</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Meeting room access hours</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Saa za ufikiaji wa chumba cha mkutano</li>
+                        </ul>
+                        
+                        <div class="price-tag english">Monthly Packages Available</div>
+                        <div class="price-tag swahili">Vifurushi vya Mwezi Vinapatikana</div>
+                    </div>
+                </div>
+                
+                <!-- Storage Solutions -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <i class="fas fa-archive"></i>
+                        <h3 class="english">Storage & Additional Services</h3>
+                        <h3 class="swahili">Hifadhi na Huduma za Ziada</h3>
+                    </div>
+                    <div class="service-body">
+                        <p class="english">Secure storage facilities and additional business support services as needed.</p>
+                        <p class="swahili">Vifaa salama vya uhifadhi na huduma za ziada za usaidizi wa biashara kama inavyohitajika.</p>
+                        
+                        <ul class="service-features">
+                            <li class="english"><i class="fas fa-check"></i> Secure document storage</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Uhifadhi salama wa hati</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Equipment storage options</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Chaguzi za kuhifadhi vifaa</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> Printing and copying services</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Huduma za kuchapisha na kunakili</li>
+                            
+                            <li class="english"><i class="fas fa-check"></i> IT support services</li>
+                            <li class="swahili"><i class="fas fa-check"></i> Huduma za usaidizi wa IT</li>
+                        </ul>
+                        
+                        <div class="price-tag english">Customizable Solutions</div>
+                        <div class="price-tag swahili">Suluhisho Zinazoweza Kubadilishwa</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="services-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="english">Ready to Elevate Your Business Space?</h2>
+                <h2 class="swahili">Tayari Kuboresha Nafasi ya Biashara Yako?</h2>
+                
+                <p class="english">Join the 700+ businesses that have rated Amani Place 4.3 stars for our premium services and professional environment.</p>
+                <p class="swahili">Jiunge na biashara 700+ ambazo zimekadiria Amani Place nyota 4.3 kwa huduma zetu za hali ya juu na mazingira ya kitaalam.</p>
+                
+                <p class="english">Our centrally located business centre offers everything you need to present a professional image and operate efficiently.</p>
+                <p class="swahili">Kituo chetu cha biashara kilichoko katikati kina kila kitu unachohitaji kuwasilisha sura ya kitaalam na kufanya kazi kwa ufanisi.</p>
+                
+                <a href="contact.html" class="btn english">Contact Us Today</a>
+                <a href="spaces.html" class="btn btn-secondary english">View Office Spaces</a>
+                
+                <a href="contact.html" class="btn swahili">Wasiliana Nasi Leo</a>
+                <a href="spaces.html" class="btn btn-secondary swahili">Tazama Nafasi za Ofisi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Amani Place</h3>
+                    <p class="english">Premium business centre offering flexible office solutions in Dar es Salaam's commercial district.</p>
+                    <p class="swahili">Kituo cha hali ya juu cha biashara kinachotoa suluhisho zinazobadilika za ofisi katika eneo la biashara la Dar es Salaam.</p>
+                    <div class="rating">
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>4.3 (700+ reviews)</span>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="english">Quick Links</h3>
+                    <h3 class="swahili">Viungo Vya Haraka</h3>
+                    <ul>
+                        <li><a href="index.html" class="english">Home</a><a href="index.html" class="swahili">Nyumbani</a></li>
+                        <li><a href="about.html" class="english">About Us</a><a href="about.html" class="swahili">Kuhusu Sisi</a></li>
+                        <li><a href="services.html" class="english">Services</a><a href="services.html" class="swahili">Huduma</a></li>
+                        <li><a href="spaces.html" class="english">Office Spaces</a><a href="spaces.html" class="swahili">Nafasi za Ofisi</a></li>
+                        <li><a href="contact.html" class="english">Contact</a><a href="contact.html" class="swahili">Wasiliana</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="english">Contact Info</h3>
+                    <h3 class="swahili">Mawasiliano</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Ohio Street, Office Park, Dar es Salaam, Tanzania</li>
+                        <li><i class="fas fa-phone"></i> +255 715 023 799</li>
+                        <li><i class="fas fa-envelope"></i> info@amaniplace.co.tz</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 5PM</li>
+                        <li><i class="fas fa-clock"></i> Sat-Sun: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="english">&copy; 2023 Amani Place. All rights reserved. | Premium Business Centre in Dar es Salaam</p>
+                <p class="swahili">&copy; 2023 Amani Place. Haki zote zimehifadhiwa. | Kituo cha Hali ya Juu cha Biashara Dar es Salaam</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const langButtons = document.querySelectorAll('.lang-btn');
+            const englishElements = document.querySelectorAll('.english');
+            const swahiliElements = document.querySelectorAll('.swahili');
+            
+            // Set initial language (English)
+            swahiliElements.forEach(el => el.style.display = 'none');
+            
+            // Add click event to language buttons
+            langButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    
+                    // Update active button
+                    langButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show/hide language elements
+                    if (lang === 'en') {
+                        englishElements.forEach(el => el.style.display = 'block');
+                        swahiliElements.forEach(el => el.style.display = 'none');
+                    } else if (lang === 'sw') {
+                        englishElements.forEach(el => el.style.display = 'none');
+                        swahiliElements.forEach(el => el.style.display = 'block');
+                    }
+                });
+            });
+            
+            // Mobile menu functionality
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+            const overlay = document.getElementById('overlay');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+            
+            overlay.addEventListener('click', function() {
+                mainNav.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+            
+            // Close mobile menu when clicking a link
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mainNav.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
