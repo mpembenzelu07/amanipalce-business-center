@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Amani Place Business Centre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Page-specific styles for Contact */
+        .page-header {
+            background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.95)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .contact-content {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info-card h3 {
+            color: #1a365d;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e6af2e;
+            font-size: 1.5rem;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contact-detail i {
+            color: #e6af2e;
+            font-size: 1.3rem;
+            margin-right: 15px;
+            margin-top: 3px;
+            min-width: 25px;
+        }
+        
+        .contact-detail h4 {
+            color: #1a365d;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-form {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-form h3 {
+            color: #1a365d;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e6af2e;
+            font-size: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #1a365d;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #e6af2e;
+            box-shadow: 0 0 0 3px rgba(230, 175, 46, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #e6af2e;
+            color: #1a365d;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            background-color: #d39e20;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #1da851;
+            color: white;
+        }
+        
+        .business-hours {
+            background-color: #1a365d;
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .business-hours h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .hours-list {
+            list-style: none;
+        }
+        
+        .hours-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .hours-list .day {
+            font-weight: 500;
+        }
+        
+        .hours-list .time {
+            color: #e6af2e;
+        }
+        
+        .map-container {
+            margin-top: 80px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 450px;
+            background-color: #e9ecef;
+            position: relative;
+        }
+        
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(26, 54, 93, 0.9);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            z-index: 2;
+        }
+        
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a365d;
+            font-size: 1.2rem;
+        }
+        
+        .text-center { text-align: center; }
+        
+        /* Language-specific */
+        .swahili { display: none; }
+        
+        @media (max-width: 768px) {
+            .page-header { padding: 70px 0; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .map-container { height: 350px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +255 715 023 799</span>
+                    <span><i class="fas fa-clock"></i> Mon–Fri 9 AM–5 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Ohio Street, Office Park, Dar es Salaam</span>
+                </div>
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">English</button>
+                    <button class="lang-btn" data-lang="sw">Swahili</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container header-container">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <h1>Amani Place</h1>
+                        <p>Premium Business Centre | Dar es Salaam</p>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="spaces.html">Office Spaces</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="overlay" id="overlay"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="english">Contact Amani Place</h1>
+            <h1 class="swahili">Wasiliana na Amani Place</h1>
+            <p class="english">Get in touch to book a tour or inquire about our premium office spaces</p>
+            <p class="swahili">Wasiliana nasi kupanga ziara au kuuliza kuhusu nafasi zetu za hali ya juu za ofisi</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info-card">
+                    <h3 class="english">Contact Information</h3>
+                    <h3 class="swahili">Mawasiliano</h3>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 class="english">Address</h4>
+                            <h4 class="swahili">Anwani</h4>
+                            <p>Ohio Street, Office Park<br>Dar es Salaam, Tanzania</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4 class="english">Phone Number</h4>
+                            <h4 class="swahili">Nambari ya Simu</h4>
+                            <p>+255 715 023 799</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 class="english">Email</h4>
+                            <h4 class="swahili">Barua Pepe</h4>
+                            <p>info@amaniplace.co.tz</p>
+                        </div>
+                    </div>
+                    
+                    <div class="business-hours">
+                        <h4 class="english">Business Hours</h4>
+                        <h4 class="swahili">Saa za Biashara</h4>
+                        <ul class="hours-list">
+                            <li>
+                                <span class="day english">Monday - Friday</span>
+                                <span class="day swahili">Jumatatu - Ijumaa</span>
+                                <span class="time">9:00 AM - 5:00 PM</span>
+                            </li>
+                            <li>
+                                <span class="day english">Saturday</span>
+                                <span class="day swahili">Jumamosi</span>
+                                <span class="time english">Closed</span>
+                                <span class="time swahili">Imefungwa</span>
+                            </li>
+                            <li>
+                                <span class="day english">Sunday</span>
+                                <span class="day swahili">Jumapili</span>
+                                <span class="time english">Closed</span>
+                                <span class="time swahili">Imefungwa</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <button class="btn whatsapp-btn" onclick="window.open('https://wa.me/255715023799', '_blank')">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="english">Message us on WhatsApp</span>
+                        <span class="swahili">Tutumie ujumbe kupitia WhatsApp</span>
+                    </button>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3 class="english">Send Us a Message</h3>
+                    <h3 class="swahili">Tutumie Ujumbe</h3>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="english">Full Name *</label>
+                            <label for="name" class="swahili">Jina Kamili *</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="english">Email Address *</label>
+                            <label for="email" class="swahili">Anwani ya Barua Pepe *</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="english">Phone Number</label>
+                            <label for="phone" class="swahili">Nambari ya Simu</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company" class="english">Company Name</label>
+                            <label for="company" class="swahili">Jina la Kampuni</label>
+                            <input type="text" id="company" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interest" class="english">Service Interested In</label>
+                            <label for="interest" class="swahili">Huduma Unayopenda</label>
+                            <select id="interest" class="form-control">
+                                <option value="" class="english">Select an option</option>
+                                <option value="" class="swahili">Chagua chaguo</option>
+                                <option value="private-office" class="english">Private Office</option>
+                                <option value="private-office" class="swahili">Ofisi Binafsi</option>
+                                <option value="coworking" class="english">Coworking Space</option>
+                                <option value="coworking" class="swahili">Nafasi ya Kushirikiana Kazi</option>
+                                <option value="meeting-room" class="english">Meeting Room</option>
+                                <option value="meeting-room" class="swahili">Chumba cha Mkutano</option>
+                                <option value="virtual-office" class="english">Virtual Office</option>
+                                <option value="virtual-office" class="swahili">Ofisi Mtandaoni</option>
+                                <option value="tour" class="english">Building Tour</option>
+                                <option value="tour" class="swahili">Ziara ya Jengo</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="english">Message *</label>
+                            <label for="message" class="swahili">Ujumbe *</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">
+                            <span class="english">Send Message</span>
+                            <span class="swahili">Tuma Ujumbe</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Map Section -->
+            <div class="map-container">
+                <div class="map-overlay" id="mapOverlay">
+                    <div>
+                        <h3 class="english">Amani Place Location</h3>
+                        <h3 class="swahili">Eneo la Amani Place</h3>
+                        <p class="english">Ohio Street, Office Park, Dar es Salaam, Tanzania</p>
+                        <p class="swahili">Ohio Street, Office Park, Dar es Salaam, Tanzania</p>
+                        <button class="btn" style="margin-top: 20px; width: auto;" onclick="openMap()">
+                            <span class="english">Open in Google Maps</span>
+                            <span class="swahili">Fungua kwenye Ramani za Google</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="map-placeholder" id="mapPlaceholder">
+                    <div>
+                        <i class="fas fa-map-marker-alt" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                        <p class="english">Interactive map would be embedded here</p>
+                        <p class="swahili">Ramani inayoshirikishwa ingeingizwa hapa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Amani Place</h3>
+                    <p class="english">Premium business centre offering flexible office solutions in Dar es Salaam's commercial district.</p>
+                    <p class="swahili">Kituo cha hali ya juu cha biashara kinachotoa suluhisho zinazobadilika za ofisi katika eneo la biashara la Dar es Salaam.</p>
+                    <div class="rating">
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>4.3 (700+ reviews)</span>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="english">Quick Links</h3>
+                    <h3 class="swahili">Viungo Vya Haraka</h3>
+                    <ul>
+                        <li><a href="index.html" class="english">Home</a><a href="index.html" class="swahili">Nyumbani</a></li>
+                        <li><a href="about.html" class="english">About Us</a><a href="about.html" class="swahili">Kuhusu Sisi</a></li>
+                        <li><a href="services.html" class="english">Services</a><a href="services.html" class="swahili">Huduma</a></li>
+                        <li><a href="spaces.html" class="english">Office Spaces</a><a href="spaces.html" class="swahili">Nafasi za Ofisi</a></li>
+                        <li><a href="contact.html" class="english">Contact</a><a href="contact.html" class="swahili">Wasiliana</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="english">Contact Info</h3>
+                    <h3 class="swahili">Mawasiliano</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Ohio Street, Office Park, Dar es Salaam, Tanzania</li>
+                        <li><i class="fas fa-phone"></i> +255 715 023 799</li>
+                        <li><i class="fas fa-envelope"></i> info@amaniplace.co.tz</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 5PM</li>
+                        <li><i class="fas fa-clock"></i> Sat-Sun: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="english">&copy; 2023 Amani Place. All rights reserved. | Premium Business Centre in Dar es Salaam</p>
+                <p class="swahili">&copy; 2023 Amani Place. Haki zote zimehifadhiwa. | Kituo cha Hali ya Juu cha Biashara Dar es Salaam</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const langButtons = document.querySelectorAll('.lang-btn');
+            const englishElements = document.querySelectorAll('.english');
+            const swahiliElements = document.querySelectorAll('.swahili');
+            
+            // Set initial language (English)
+            swahiliElements.forEach(el => el.style.display = 'none');
+            
+            // Add click event to language buttons
+            langButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    
+                    // Update active button
+                    langButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show/hide language elements
+                    if (lang === 'en') {
+                        englishElements.forEach(el => el.style.display = 'block');
+                        swahiliElements.forEach(el => el.style.display = 'none');
+                    } else if (lang === 'sw') {
+                        englishElements.forEach(el => el.style.display = 'none');
+                        swahiliElements.forEach(el => el.style.display = 'block');
+                    }
+                });
+            });
+            
+            // Mobile menu functionality
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+            const overlay = document.getElementById('overlay');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+            
+            overlay.addEventListener('click', function() {
+                mainNav.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+            
+            // Close mobile menu when clicking a link
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mainNav.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            });
+            
+            // Contact form submission
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                // In a real application, you would send this data to a server
+                // For this example, we'll show an alert
+                const currentLang = document.querySelector('.lang-btn.active').getAttribute('data-lang');
+                
+                if (currentLang === 'en') {
+                    alert(`Thank you ${name}! Your message has been sent. We will contact you at ${email} shortly.`);
+                } else {
+                    alert(`Asante ${name}! Ujumbe wako umetumwa. Tutawasiliana nawe kwa ${email hivi karibuni.`);
+                }
+                
+                // Reset form
+                contactForm.reset();
+            });
+            
+            // Map overlay functionality
+            const mapOverlay = document.getElementById('mapOverlay');
+            mapOverlay.addEventListener('click', function() {
+                this.style.display = 'none';
+            });
+        });
+        
+        function openMap() {
+            // Open Google Maps with Amani Place location
+            window.open('https://goo.gl/maps/example', '_blank');
+        }
+    </script>
+</body>
+</html>
