@@ -1,31 +1,761 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amani Place | Premium Office Space Dar es Salaam</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Amani Place | Premium Office Space in Dar es Salaam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #e6af2e;
+            --accent: #2d5a8c;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --gray: #6c757d;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: #f5f7fa;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-top {
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+        
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .language-switcher {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .lang-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 4px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.85rem;
+        }
+        
+        .lang-btn:hover, .lang-btn.active {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+        
+        .main-header {
+            padding: 20px 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+        
+        .logo-text p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: var(--transition);
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            font-size: 1rem;
+        }
+        
+        nav a:hover, nav a.active {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--primary);
+            padding: 14px 32px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #d39e20;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        /* Building Preview */
+        .building-preview {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .building-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .building-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .building-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .building-details {
+            flex: 1;
+        }
+        
+        .building-details h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .building-details p {
+            margin-bottom: 20px;
+        }
+        
+        .details-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .details-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .details-list i {
+            color: var(--secondary);
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: #f8f9fa;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: "\201C";
+            font-size: 4rem;
+            color: var(--secondary);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .author-info h4 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Rating */
+        .rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 5px;
+        }
+        
+        .rating-stars {
+            color: #ffc107;
+            margin-right: 10px;
+        }
+        
+        .rating-value {
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .rating-count {
+            color: var(--gray);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .building-content {
+                flex-direction: column;
+            }
+            
+            .hero h2 {
+                font-size: 2.3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: white;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: var(--transition);
+                z-index: 1001;
+                padding-top: 80px;
+            }
+            
+            nav.active {
+                right: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: 0 30px;
+                gap: 0;
+            }
+            
+            nav li {
+                margin-bottom: 20px;
+            }
+            
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 1000;
+                display: none;
+            }
+            
+            .overlay.active {
+                display: block;
+            }
+            
+            .header-top .container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .features, .building-preview, .testimonials {
+                padding: 60px 0;
+            }
+        }
+        
+        /* Language-specific styles */
+        .swahili {
+            display: none;
+        }
+        
+        /* Page specific */
+        .page-content {
+            padding: 80px 0;
+            min-height: 60vh;
+        }
+        
+        .page-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Services Page */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-image {
+            height: 200px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 3rem;
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Contact Page */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .contact-info-card h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-detail i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        .contact-form {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(230, 175, 46, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .map-container {
+            margin-top: 60px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            height: 400px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="nav-container">
-                <div class="logo">
-                    <h1>Amani <span>Place</span></h1>
-                    <p class="logo-sub">Premium Business Center</p>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +255 715 023 799</span>
+                    <span><i class="fas fa-clock"></i> Mon–Fri 9 AM–5 PM</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Ohio Street, Office Park, Dar es Salaam</span>
                 </div>
-                
-                <button class="mobile-toggle" id="mobileToggle">☰</button>
-                
-                <nav class="nav-menu" id="navMenu">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="services.html">Services</a>
-                    <a href="spaces.html">Spaces</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="contact.html" class="book-btn">Book Tour</a>
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">English</button>
+                    <button class="lang-btn" data-lang="sw">Swahili</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container header-container">
+                <div class="logo-container">
+                    <div class="logo-text">
+                        <h1>Amani Place</h1>
+                        <p>Premium Business Centre | Dar es Salaam</p>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="spaces.html">Office Spaces</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </nav>
+                <div class="overlay" id="overlay"></div>
             </div>
         </div>
     </header>
@@ -33,153 +763,285 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-badge">
-                <span>DAR ES SALAAM'S PREMIUM ADDRESS</span>
-            </div>
-            
-            <h1 class="hero-title">Elevate Your Business Excellence</h1>
-            
-            <p class="hero-description">
-                Experience unparalleled luxury and sophistication in Tanzania's most exclusive business center. 
-                Premium office spaces, state-of-the-art amenities, and executive services designed for success.
-            </p>
-            
-            <div class="hero-buttons">
-                <a href="spaces.html" class="btn primary-btn">Explore Spaces</a>
-                <a href="contact.html" class="btn secondary-btn">Book a Tour</a>
-            </div>
-            
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-number">4.3/5</div>
-                    <div class="stat-label">700+ Reviews</div>
+            <div class="hero-content">
+                <h2 class="english">Premium Office Space in the Heart of Dar es Salaam</h2>
+                <h2 class="swahili">Ofisi Bora Katika Kitovu cha Jiji la Dar es Salaam</h2>
+                
+                <p class="english">Amani Place is a professional business centre offering flexible, A-grade office solutions for companies, startups, and consultancies without long-term leases.</p>
+                <p class="swahili">Amani Place ni kituo cha kitaalam cha biashara kinachotoa ofisi bora, zenye kubadilika kwa kampuni, vyanzo vya biashara, na mashauriano bila mikataba ya muda mrefu.</p>
+                
+                <div class="rating">
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-value">4.3</span>
+                    <span class="rating-count">(700+ reviews)</span>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">9 Floors</div>
-                    <div class="stat-label">Premium Offices</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">200+</div>
-                    <div class="stat-label">Companies</div>
+                
+                <div>
+                    <a href="contact.html" class="btn">Book a Tour</a>
+                    <a href="services.html" class="btn btn-secondary">View Services</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="section">
+    <!-- Features Section -->
+    <section class="features">
         <div class="container">
-            <div class="section-header">
-                <h2>Why Choose Amani Place</h2>
-                <p>Experience premium office solutions in the heart of Dar es Salaam's commercial district</p>
+            <div class="section-title">
+                <h2 class="english">Why Choose Amani Place</h2>
+                <h2 class="swahili">Kwa Nini Kuchagua Amani Place</h2>
+                <p class="english">Modern workspace solutions designed for productivity and professional growth</p>
+                <p class="swahili">Suluhisho za kisasa za workspace zilizoundwa kwa tija na ukuaji wa kitaalamu</p>
             </div>
             
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">📍</div>
-                    <h3>Prime Location</h3>
-                    <p>Located on Ohio Street in the Office Park, Dar es Salaam's central business district</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="english">Prime Location</h3>
+                    <h3 class="swahili">Eneo Bora</h3>
+                    <p class="english">Centrally located in Dar es Salaam's commercial district with easy access to major business hubs.</p>
+                    <p class="swahili">Iko katikati mwa eneo la biashara la Dar es Salaam na upatikanaji rahisi wa vituo vikuu vya biashara.</p>
                 </div>
                 
-                <div class="feature">
-                    <div class="feature-icon">🏢</div>
-                    <h3>A-Grade Building</h3>
-                    <p>Modern 9-12 floor office building with professional ambiance and premium facilities</p>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="english">Modern Facilities</h3>
+                    <h3 class="swahili">Vifaa Vya Kisasa</h3>
+                    <p class="english">9-12 floor A-grade building with air-conditioning, high-speed lifts, and premium amenities.</p>
+                    <p class="swahili">Jengo la ghorofa 9-12 la daraja A lenye ubaridi, lifti za kasi, na vifaa vya hali ya juu.</p>
                 </div>
                 
-                <div class="feature">
-                    <div class="feature-icon">📅</div>
-                    <h3>Flexible Leasing</h3>
-                    <p>No long-term commitments. Office spaces available on demand with flexible terms</p>
-                </div>
-                
-                <div class="feature">
-                    <div class="feature-icon">🛎️</div>
-                    <h3>Full Support</h3>
-                    <p>Reception, concierge, admin support, and business services included</p>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="english">Flexible Leasing</h3>
+                    <h3 class="swahili">Ukodishaji Unaobadilika</h3>
+                    <p class="english">No long-term commitments required. Choose from daily, monthly or yearly office solutions.</p>
+                    <p class="swahili">Hakuna ahadi za muda mrefu. Chagua kati ya suluhisho za ofisi za kila siku, kila mwezi au kila mwaka.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services -->
-    <section class="section services">
+    <!-- Building Preview -->
+    <section class="building-preview">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Comprehensive office solutions for modern businesses</p>
-            </div>
-            
-            <div class="service-cards">
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Private Offices">
-                    </div>
-                    <div class="service-content">
-                        <h3>Private Offices</h3>
-                        <p>Fully furnished private offices available on demand. Perfect for teams of all sizes.</p>
-                        <a href="services.html" class="learn-more">Learn More →</a>
-                    </div>
+            <div class="building-content">
+                <div class="building-image">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Amani Place Building">
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Meeting Rooms">
-                    </div>
-                    <div class="service-content">
-                        <h3>Meeting Rooms</h3>
-                        <p>Professional meeting spaces equipped with modern technology for presentations.</p>
-                        <a href="services.html" class="learn-more">Learn More →</a>
-                    </div>
+                <div class="building-details">
+                    <h2 class="english">A-Grade Office Building</h2>
+                    <h2 class="swahili">Jengo la Ofisi la Daraja A</h2>
+                    
+                    <p class="english">Amani Place is a multi-story professional business centre offering modern workspace solutions in the heart of Dar es Salaam's commercial district.</p>
+                    <p class="swahili">Amani Place ni kituo cha kitaalam cha biashara cha ghorofa nyingi kinachotoa suluhisho za kisasa za workspace katikati mwa eneo la biashara la Dar es Salaam.</p>
+                    
+                    <ul class="details-list">
+                        <li class="english"><i class="fas fa-check-circle"></i> Air-conditioned workspaces & common areas</li>
+                        <li class="swahili"><i class="fas fa-check-circle"></i> Maeneo ya kufanya kazi na maeneo ya kawaida yanayopozwa</li>
+                        
+                        <li class="english"><i class="fas fa-check-circle"></i> Reception & concierge services</li>
+                        <li class="swahili"><i class="fas fa-check-circle"></i> Huduma za mapokezi na concierge</li>
+                        
+                        <li class="english"><i class="fas fa-check-circle"></i> Business lounge areas & meeting rooms</li>
+                        <li class="swahili"><i class="fas fa-check-circle"></i> Maeneo ya mapumziko ya biashara na vyumba vya mkutano</li>
+                        
+                        <li class="english"><i class="fas fa-check-circle"></i> High-speed elevator access</li>
+                        <li class="swahili"><i class="fas fa-check-circle"></i> Ufikiaji wa lifti za kasi</li>
+                        
+                        <li class="english"><i class="fas fa-check-circle"></i> Storage & admin support services</li>
+                        <li class="swahili"><i class="fas fa-check-circle"></i> Huduma za uhifadhi na usaidizi wa usimamizi</li>
+                    </ul>
+                    
+                    <a href="spaces.html" class="btn">View Office Spaces</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta">
+    <!-- Testimonials -->
+    <section class="testimonials">
         <div class="container">
-            <h2>Ready to Elevate Your Business?</h2>
-            <p>Schedule a private tour and experience the Amani Place difference today.</p>
-            <a href="contact.html" class="btn primary-btn">Schedule a Tour</a>
+            <div class="section-title">
+                <h2 class="english">What Our Clients Say</h2>
+                <h2 class="swahili">Wateja Wetu Wanachosema</h2>
+                <p class="english">Rated ⭐ 4.3 by 700+ businesses and professionals</p>
+                <p class="swahili">Imepimwa ⭐ 4.3 na biashara 700+ na wataalamu</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text english">
+                        "Amani Place provides the perfect professional environment for our consulting firm. The location is ideal and facilities are top-notch."
+                    </div>
+                    <div class="testimonial-text swahili">
+                        "Amani Place inatoa mazingira bora ya kitaalam kwa kampuni yetu ya ushauri. Eneo ni bora na vifaa vya hali ya juu."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">FB</div>
+                        <div class="author-info">
+                            <h4>FB Attorneys</h4>
+                            <p class="english">Law Firm</p>
+                            <p class="swahili">Kampuni ya Sheria</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text english">
+                        "As an international company, we needed a professional space quickly. Amani Place offered flexible terms and all the amenities we needed."
+                    </div>
+                    <div class="testimonial-text swahili">
+                        "Kama kampuni ya kimataifa, tulihitaji nafasi ya kitaalam haraka. Amani Place ilitoa masharti yanayobadilika na vifaa vyote tulivyohitaji."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div class="author-info">
+                            <h4>Regus Client</h4>
+                            <p class="english">International Firm</p>
+                            <p class="swahili">Kampuni ya Kimataifa</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text english">
+                        "The business lounge and meeting rooms are excellent for client meetings. Great location in the CBD with secure parking available."
+                    </div>
+                    <div class="testimonial-text swahili">
+                        "Ukumbi wa biashara na vyumba vya mkutano ni bora kwa mikutano ya mteja. Eneo bora katika CBD lenye maegesho salama."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Startup Founder</h4>
+                            <p class="english">Technology Company</p>
+                            <p class="swahili">Kampuni ya Teknolojia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <h2>Amani <span>Place</span></h2>
-                        <p class="logo-sub">Premium Business Center</p>
+                <div class="footer-column">
+                    <h3>Amani Place</h3>
+                    <p class="english">Premium business centre offering flexible office solutions in Dar es Salaam's commercial district.</p>
+                    <p class="swahili">Kituo cha hali ya juu cha biashara kinachotoa suluhisho zinazobadilika za ofisi katika eneo la biashara la Dar es Salaam.</p>
+                    <div class="rating">
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>4.3 (700+ reviews)</span>
                     </div>
-                    <p>Premium office space solutions in the heart of Dar es Salaam's commercial district.</p>
                 </div>
                 
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="services.html">Services</a>
-                    <a href="spaces.html">Spaces</a>
-                    <a href="contact.html">Contact</a>
+                <div class="footer-column">
+                    <h3 class="english">Quick Links</h3>
+                    <h3 class="swahili">Viungo Vya Haraka</h3>
+                    <ul>
+                        <li><a href="index.html" class="english">Home</a><a href="index.html" class="swahili">Nyumbani</a></li>
+                        <li><a href="about.html" class="english">About Us</a><a href="about.html" class="swahili">Kuhusu Sisi</a></li>
+                        <li><a href="services.html" class="english">Services</a><a href="services.html" class="swahili">Huduma</a></li>
+                        <li><a href="spaces.html" class="english">Office Spaces</a><a href="spaces.html" class="swahili">Nafasi za Ofisi</a></li>
+                        <li><a href="contact.html" class="english">Contact</a><a href="contact.html" class="swahili">Wasiliana</a></li>
+                    </ul>
                 </div>
                 
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p>📍 Ohio Street, Office Park<br>Dar es Salaam, Tanzania</p>
-                    <p>📞 +255 715 023 799</p>
-                    <p>🕒 Mon-Fri: 9AM-5PM</p>
+                <div class="footer-column">
+                    <h3 class="english">Contact Info</h3>
+                    <h3 class="swahili">Mawasiliano</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Ohio Street, Office Park, Dar es Salaam, Tanzania</li>
+                        <li><i class="fas fa-phone"></i> +255 715 023 799</li>
+                        <li><i class="fas fa-envelope"></i> info@amaniplace.co.tz</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 5PM</li>
+                        <li><i class="fas fa-clock"></i> Sat-Sun: Closed</li>
+                    </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>© 2024 Amani Place. All rights reserved.</p>
+                <p class="english">&copy; 2023 Amani Place. All rights reserved. | Premium Business Centre in Dar es Salaam</p>
+                <p class="swahili">&copy; 2023 Amani Place. Haki zote zimehifadhiwa. | Kituo cha Hali ya Juu cha Biashara Dar es Salaam</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        // Language switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const langButtons = document.querySelectorAll('.lang-btn');
+            const englishElements = document.querySelectorAll('.english');
+            const swahiliElements = document.querySelectorAll('.swahili');
+            
+            // Set initial language (English)
+            swahiliElements.forEach(el => el.style.display = 'none');
+            
+            // Add click event to language buttons
+            langButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    
+                    // Update active button
+                    langButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show/hide language elements
+                    if (lang === 'en') {
+                        englishElements.forEach(el => el.style.display = 'block');
+                        swahiliElements.forEach(el => el.style.display = 'none');
+                    } else if (lang === 'sw') {
+                        englishElements.forEach(el => el.style.display = 'none');
+                        swahiliElements.forEach(el => el.style.display = 'block');
+                    }
+                });
+            });
+            
+            // Mobile menu functionality
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mainNav = document.getElementById('mainNav');
+            const overlay = document.getElementById('overlay');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+            
+            overlay.addEventListener('click', function() {
+                mainNav.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+            
+            // Close mobile menu when clicking a link
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mainNav.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
